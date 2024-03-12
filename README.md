@@ -1,66 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Nafes
 
-## About Laravel
+Nafes (نفس) is an online therapy platform in Algeria that aims to enhance mental well-being by providing convenient and accessible counseling services.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Comprehensive Mental Health Services:** Nafes offers a holistic approach to individuals' health and well-being, including diagnosis and psychological treatments for emotional and mental health problems.
+- **Convenient and Confidential:** Online therapy through Nafes provides a more convenient and accessible option for those who may not be able to attend traditional in-person therapy sessions. It also offers a confidential and private setting for discussing personal issues.
+- **Affordable and Flexible:** Nafes's online therapy is cost-effective, making it accessible to a wider audience. Patients can choose from various communication modes, including text-based, voice messages, or video calls, based on their preferences.
+- **Expert Care Anywhere, Anytime:** Nafes operates entirely online, eliminating waiting rooms and providing on-demand care. With a diverse team of many therapists, Nafes covers a range of specialties to meet unique needs.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Getting Started
 
-## Learning Laravel
+To set up the Nafes application locally, follow these steps:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone the repository:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   ```
+   git clone https://github.com/DzKriMo/nafes.git
+Navigate to the project directory:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+cd nafes
+Install dependencies:
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+composer install
+npm install
+Set up your environment variables by renaming the .env.example file to .env and configuring it with your environment-specific values.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Generate the application key:
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+php artisan key:generate
+Run database migrations and seeders:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+php artisan migrate --seed
+Start the Laravel development server:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+php artisan serve
+Access the application in your web browser at http://localhost:8000.
+
+Contributing
+Contributions are welcome! If you would like to contribute to the Nafes project, please follow these steps:
+
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Make your changes and ensure they are properly tested.
+Commit your changes with descriptive commit messages.
+Push your changes to your forked repository.
+Submit a pull request to the main repository.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+
+
+In this `README.md` file:
+
+- The file starts with a title and a brief overview of the application.
+- Features section highlights the key features of the application.
+- Getting Started section provides instructions on how to set up the application locally.
+- Contributing section outlines the steps for contributing to the project.
+- License section specifies the license under which the project is distributed.
+
+Feel free to customize the content according to your specific application's features, setup instructions, and contribution guidelines.
