@@ -16,14 +16,22 @@
         background-color: #68B2A0;
         background-image: url("/img/back.png");
         color: #333;
-        margin: 0;
+        
         padding: 0;
+        display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ margin: 0;
     }
 
     .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
+        flex: 1; 
+  background-image: url("/img/bck.png");
+  background-size: cover;
+  background-position: center;
     }
 
     h1 {
@@ -50,9 +58,104 @@
     blockquote p {
         margin: 0;
     }
+    .navbar {
+     background-color: #f0f0f0; 
+     border-radius: 15px;
+     margin-left: 5px;
+     margin-top: 0;
+     margin-right: 5px;
+     color: #23373B;
+    height: 10vh;
+}
+ .nav-link {
+    color: #fff;
+}
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+background-color: #f0f0f0e4; 
+}
+
+.nav-button{
+
+  display: inline-block;
+  
+  border-radius: 10px;
+
+  background-color: #68B2A0;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-color:  transparent ;
+  cursor: pointer;
+  font-size: 16px;
+  text-shadow: black;
+
+}
+
+
+.nav-button:hover {
+  background-color: #5A9A88;
+}
+
 </style>
 </head>
 <body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f0f0f0; border-radius: 15px; margin: 5px;">
+        <!-- Logo and text -->
+        <a class="navbar-brand" href="{{ route('index') }}">Nafes</a>
+
+        <!-- Toggler button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/about.html">&nbsp;&nbsp;About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">&nbsp;&nbsp;Advice</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">&nbsp;&nbsp;FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews">&nbsp;&nbsp;Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">&nbsp;&nbsp;Contact</a>
+                </li>
+                <li class="nav-item">
+                &nbsp;
+                    <a href="{{ route('login') }}" class="nav-button">
+                    
+                    <button class="nav-button ">Login</button>
+                    </a>
+                
+                </li>
+                <li class="nav-item">
+                &nbsp;
+                </li>
+                <li class="nav-item">
+                &nbsp;   
+                <a href="{{ route('register') }}" class="nav-button">
+                     <button class="nav-button ">Apply as a Therapist</button>
+                    </a>
+                   
+                </li>
+                <li class="nav-item">
+                &nbsp;
+                </li>
+            </ul>
+        </div>
+    </nav>
+
 <div class="container">
     <h1>About Nafes</h1>
     <p>Nafes (نفس) is an online therapy platform in Algeria that aims to enhance mental well-being by providing convenient and accessible counselling services. Here’s what you need to know about Nafes:</p>
@@ -78,4 +181,8 @@
     <p>Whether you’re seeking support for anxiety, depression, or other mental health concerns, Nafes provides a supportive environment to help you on your journey toward well-being. 🌟</p>
 </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>

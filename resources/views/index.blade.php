@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/html/about.html">&nbsp;&nbsp;About</a>
+                    <a class="nav-link" href="{{ route('about') }}">&nbsp;&nbsp;About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">&nbsp;&nbsp;Advice</a>
