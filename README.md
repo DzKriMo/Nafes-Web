@@ -21,12 +21,12 @@ To set up the Nafes application locally, follow these steps:
 Navigate to the project directory:
 
 
-
+   ```
 cd nafes
 Install dependencies:
 
 
-
+   ```
 composer install
 npm install
 Set up your environment variables by renaming the .env.example file to .env and configuring it with your environment-specific values.
