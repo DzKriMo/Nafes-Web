@@ -37,16 +37,18 @@ To set up the Nafes application locally, follow these steps:
 
 
    ```
-php artisan key:generate
+   php artisan key:generate
 
 5. Run database migrations and seeders:
 
    ```
-php artisan migrate --seed
+   php artisan migrate --seed
 6. Start the Laravel development server:
 
    ```
-php artisan serve
+   php artisan serve
+
+
 7. Access the application in your web browser at http://localhost:8000.
 
 
