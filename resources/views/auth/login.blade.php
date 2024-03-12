@@ -39,7 +39,8 @@
                 </a>
             @endif
 
-            <x-primary-button class="ms-3">
+            <!-- Remove the Laravel logo and change the theme color -->
+            <x-primary-button class="ms-3" style="background-color: #68B2A0;">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>

@@ -27,10 +27,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">&nbsp;&nbsp;About</a>
+                    <a class="nav-link" href="/html/about.html">&nbsp;&nbsp;About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#advice">&nbsp;&nbsp;Advice</a>
+                    <a class="nav-link" href="#">&nbsp;&nbsp;Advice</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#faq">&nbsp;&nbsp;FAQ</a>
@@ -67,8 +67,34 @@
     </nav>
 
     <div class="container">
-       
+        <br>
+    <h1 style="color: #f0f0f0; font-weight: 550; text-align: center; font-size: 36px;">Download the app<br>
+       and start healing!</h1>   
+<p style="text-align: center; font-size:24px;">Your Voice Matters. Let Us Listen, Understand,<br> and Guide You Towards the Best Psychological <br>Care in Algeria, Because Your Mental Health Truly <br>Matters!
+Exclusively Available on our App</p>
+<div class="video-container">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="/img/image.png" style="width: 50%; max-width: 400px;" />
+    </a>
+</div><br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
     </div>
+
+    <br><br><br><br>
+   
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

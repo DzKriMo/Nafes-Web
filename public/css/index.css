@@ -4,11 +4,13 @@
   }
 body{
   background-color: #68B2A0;
+  background-image: url("/img/back.png");
  font-family: 'ABeeZee';
  display: flex;
  flex-direction: column;
  min-height: 100vh;
  margin: 0;
+ 
 
 }
   
@@ -26,7 +28,7 @@ body{
 }
 .navbar-collapse.collapsing,
 .navbar-collapse.show {
-background-color: #f0f0f0c2; 
+background-color: #f0f0f0e4; 
 }
 
 .nav-button{
@@ -57,4 +59,15 @@ background-color: #f0f0f0c2;
   background-image: url("/img/bck.png");
   background-size: cover;
   background-position: center;
+}
+.video-container {
+  text-align: center;
+}
+
+.video-container img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
