@@ -22,13 +22,16 @@ Navigate to the project directory:
 
 
    ```
-cd nafes
+   cd nafes
+
 Install dependencies:
 
 
    ```
-composer install
-npm install
+   composer install
+   ```
+   npm install
+
 Set up your environment variables by renaming the .env.example file to .env and configuring it with your environment-specific values.
 
 Generate the application key:
