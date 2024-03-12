@@ -18,49 +18,36 @@ To set up the Nafes application locally, follow these steps:
 
    ```
    git clone https://github.com/DzKriMo/nafes.git
-Navigate to the project directory:
+2. Navigate to the project directory:
 
 
    ```
    cd nafes
 
-Install dependencies:
+3. Install dependencies:
 
 
    ```
    composer install
-   ```
    npm install
 
-Set up your environment variables by renaming the .env.example file to .env and configuring it with your environment-specific values.
+3. Set up your environment variables by renaming the .env.example file to .env and configuring it with your environment-specific values.
 
-Generate the application key:
+4. Generate the application key:
 
 
-
+   ```
 php artisan key:generate
-Run database migrations and seeders:
 
+5. Run database migrations and seeders:
 
+   ```
 php artisan migrate --seed
-Start the Laravel development server:
+6. Start the Laravel development server:
 
-
+   ```
 php artisan serve
-Access the application in your web browser at http://localhost:8000.
-
-Contributing
-Contributions are welcome! If you would like to contribute to the Nafes project, please follow these steps:
-
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and ensure they are properly tested.
-Commit your changes with descriptive commit messages.
-Push your changes to your forked repository.
-Submit a pull request to the main repository.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
+7. Access the application in your web browser at http://localhost:8000.
 
 
 
