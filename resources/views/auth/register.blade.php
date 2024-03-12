@@ -1,4 +1,5 @@
 <x-guest-layout>
+<p class="mb-4 text-lg text-gray-800 dark:text-gray-200">Become a Nafes Therapist!</p>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 

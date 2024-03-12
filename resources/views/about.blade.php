@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Nafes</title>
+<link rel="icon" type="image/x-icon" href="/img/logo.ico">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +54,8 @@
         border-radius: 25px;
         border-left: 5px solid #23373B;
         background-color: #fff;
+        box-shadow: #23373BA0 4px 4px 4px;
+        
     }
 
     blockquote p {
@@ -62,10 +65,11 @@
      background-color: #f0f0f0; 
      border-radius: 15px;
      margin-left: 5px;
+     box-shadow: #23373B80 4px 4px 4px;
      margin-top: 0;
      margin-right: 5px;
      color: #23373B;
-    height: 10vh;
+    height: 12vh;
 }
  .nav-link {
     color: #fff;
@@ -89,6 +93,7 @@ background-color: #f0f0f0e4;
   cursor: pointer;
   font-size: 16px;
   text-shadow: black;
+  margin-top: 2px;
 
 }
 
@@ -103,9 +108,9 @@ background-color: #f0f0f0e4;
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f0f0f0; border-radius: 15px; margin: 5px;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f0f0f0; border-radius: 15px; margin: 5px;">
         <!-- Logo and text -->
-        <a class="navbar-brand" href="{{ route('index') }}">Nafes</a>
+        <a class="navbar-brand" href="{{route('index')}}">Nafes</a>
 
         <!-- Toggler button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -123,7 +128,7 @@ background-color: #f0f0f0e4;
                     <a class="nav-link" href="#">&nbsp;&nbsp;Advice</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('faq')}}">&nbsp;&nbsp;FAQ</a>
+                    <a class="nav-link" href="{{ route('faq') }}">&nbsp;&nbsp;FAQ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#reviews">&nbsp;&nbsp;Reviews</a>
@@ -131,8 +136,20 @@ background-color: #f0f0f0e4;
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">&nbsp;&nbsp;Contact</a>
                 </li>
+                @auth
                 <li class="nav-item">
                 &nbsp;
+                
+                    <a href="{{ url('/dashboard') }}" class="nav-button">
+                    
+                    <button class="nav-button ">Dashbord</button>
+                    </a>
+                
+                </li>
+                @else
+                <li class="nav-item">
+                &nbsp;
+                
                     <a href="{{ route('login') }}" class="nav-button">
                     
                     <button class="nav-button ">Login</button>
@@ -149,6 +166,8 @@ background-color: #f0f0f0e4;
                     </a>
                    
                 </li>
+                @endauth
+                
                 <li class="nav-item">
                 &nbsp;
                 </li>

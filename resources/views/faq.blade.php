@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <title>FAQ - Nafes</title>
+<link rel="icon" type="image/x-icon" href="/img/logo.ico">
 <style>
    
 
@@ -16,6 +17,9 @@
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
+        background-image: url("/img/bck.png");
+  background-size: cover;
+  background-position: center;
     }
 
 
@@ -51,7 +55,8 @@
      margin-right: 5px;
      margin-top: 0;
      color: #23373B;
-    height: 10vh;
+     box-shadow: #23373B80 4px 4px 4px;
+    height: 12vh;
 }
  .nav-link {
     color: #fff;
@@ -72,9 +77,11 @@ background-color: #f0f0f0e4;
   text-align: center;
   text-decoration: none;
   border-color:  transparent ;
+  
   cursor: pointer;
   font-size: 16px;
   text-shadow: black;
+  margin-top: 2px;
 
 }
 
@@ -114,8 +121,20 @@ background-color: #f0f0f0e4;
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">&nbsp;&nbsp;Contact</a>
                 </li>
+                @auth
                 <li class="nav-item">
                 &nbsp;
+                
+                    <a href="{{ url('/dashboard') }}" class="nav-button">
+                    
+                    <button class="nav-button ">Dashbord</button>
+                    </a>
+                
+                </li>
+                @else
+                <li class="nav-item">
+                &nbsp;
+                
                     <a href="{{ route('login') }}" class="nav-button">
                     
                     <button class="nav-button ">Login</button>
@@ -132,6 +151,8 @@ background-color: #f0f0f0e4;
                     </a>
                    
                 </li>
+                @endauth
+                
                 <li class="nav-item">
                 &nbsp;
                 </li>

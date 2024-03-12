@@ -2,6 +2,7 @@
 
 <head>
     <title>Nafes نفس</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo.ico">
 </head>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -41,8 +42,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">&nbsp;&nbsp;Contact</a>
                 </li>
+                @auth
                 <li class="nav-item">
                 &nbsp;
+                
+                    <a href="{{ url('/dashboard') }}" class="nav-button">
+                    
+                    <button class="nav-button ">Dashbord</button>
+                    </a>
+                
+                </li>
+                @else
+                <li class="nav-item">
+                &nbsp;
+                
                     <a href="{{ route('login') }}" class="nav-button">
                     
                     <button class="nav-button ">Login</button>
@@ -59,6 +72,8 @@
                     </a>
                    
                 </li>
+                @endauth
+                
                 <li class="nav-item">
                 &nbsp;
                 </li>

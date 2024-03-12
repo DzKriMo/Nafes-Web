@@ -1,4 +1,5 @@
 <x-guest-layout>
+<p class="mb-4 text-lg text-gray-800 dark:text-gray-200">Welcome Back Doc!</p>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
