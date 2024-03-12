@@ -22,6 +22,10 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

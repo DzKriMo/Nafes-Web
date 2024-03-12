@@ -15,7 +15,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f0f0f0; border-radius: 15px; margin: 5px;">
         <!-- Logo and text -->
-        <a class="navbar-brand" href="#">Nafes</a>
+        <a class="navbar-brand" href="{{route('index')}}">Nafes</a>
 
         <!-- Toggler button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -33,7 +33,7 @@
                     <a class="nav-link" href="#">&nbsp;&nbsp;Advice</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#faq">&nbsp;&nbsp;FAQ</a>
+                    <a class="nav-link" href="{{ route('faq') }}">&nbsp;&nbsp;FAQ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#reviews">&nbsp;&nbsp;Reviews</a>
