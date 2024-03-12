@@ -58,7 +58,4 @@ In this `README.md` file:
 - The file starts with a title and a brief overview of the application.
 - Features section highlights the key features of the application.
 - Getting Started section provides instructions on how to set up the application locally.
-- Contributing section outlines the steps for contributing to the project.
-- License section specifies the license under which the project is distributed.
 
-Feel free to customize the content according to your specific application's features, setup instructions, and contribution guidelines.
