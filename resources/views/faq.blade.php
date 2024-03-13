@@ -10,86 +10,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <title>FAQ - Nafes</title>
 <link rel="icon" type="image/x-icon" href="/img/logo.ico">
-<style>
-   
-
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        background-image: url("/img/bck.png");
-  background-size: cover;
-  background-position: center;
-    }
-
-
-    h3 {
-        margin-top: 30px;
-    }
-
-    .question {
-        font-weight: bold;
-        margin-top: 20px;
-    }
-
-    .answer {
-        margin-bottom: 20px;
-    }
-    body{
-  background-color: #68B2A0;
-  background-image: url("/img/back.png");
- font-family: 'ABeeZee';
- display: flex;
- flex-direction: column;
- min-height: 100vh;
- margin: 0;
- 
-
-}
-  
- 
-  .navbar {
-     background-color: #f0f0f0; 
-     border-radius: 15px;
-     margin-left: 5px;
-     margin-right: 5px;
-     margin-top: 0;
-     color: #23373B;
-     box-shadow: #23373B80 4px 4px 4px;
-    height: 12vh;
-}
- .nav-link {
-    color: #fff;
-}
-.navbar-collapse.collapsing,
-.navbar-collapse.show {
-background-color: #f0f0f0e4; 
-}
-
-.nav-button{
-
-  display: inline-block;
-  
-  border-radius: 10px;
-
-  background-color: #68B2A0;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  border-color:  transparent ;
-  
-  cursor: pointer;
-  font-size: 16px;
-  text-shadow: black;
-  margin-top: 2px;
-
-}
-
-
-.nav-button:hover {
-  background-color: #5A9A88;
-}
-</style>
+<link rel="stylesheet" href="/css/faq.css">
 </head>
 <body>
     
@@ -164,7 +85,7 @@ background-color: #f0f0f0e4;
     <h3>General Questions</h3>
     <div class="faq-item">
         <div class="question">What is Nafes?</div>
-        <div class="answer">Nafes is an online therapy platform in Algeria that provides convenient and accessible counseling services to enhance mental well-being.</div>
+        <div class="answer">Nafes is an online therapy platform based in Algeria that provides convenient and accessible counseling services to enhance your mental well-being.</div>
     </div>
 
     <div class="faq-item">
