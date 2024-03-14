@@ -41,13 +41,15 @@ background-color: #f0f0f0e4;
 
   background-color: #68B2A0;
   color: #ffffff;
+
   text-align: center;
   text-decoration: none;
   border-color:  transparent ;
+  box-shadow: #23373B 1.5px 1.5px;
   cursor: pointer;
   font-size: 16px;
+  text-shadow: black 1.3px 1.3px;
   margin-top: 2px;
-  text-shadow: black;
 
 }
 
