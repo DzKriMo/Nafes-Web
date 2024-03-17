@@ -25,7 +25,7 @@
     body{
   background-color: #68B2A0;
   background-image: url("/img/back.png");
- font-family: 'ABeeZee';
+  font-family: 'Roboto Serif', serif;
  display: flex;
  flex-direction: column;
  min-height: 100vh;
@@ -35,44 +35,32 @@
 }
   
  
-  .navbar {
-     background-color: #f0f0f0; 
-     border-radius: 15px;
-     margin-left: 5px;
-     margin-right: 5px;
-     margin-top: 0;
-     color: #23373B;
-     box-shadow: #23373B80 4px 4px 4px;
-    height: 12vh;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
 }
- .nav-link {
-    color: #fff;
+.nav-link {
+  color: #FBFBFB;
+  font-size: 14px;
 }
 .navbar-collapse.collapsing,
 .navbar-collapse.show {
 background-color: #f0f0f0e4; 
 }
-
-.nav-button{
-
+.nav-button {
   display: inline-block;
-  
-  border-radius: 10px;
-
-  background-color: #68B2A0;
-  color: #ffffff;
-
+  border-radius: 20px;
+  background-color: #FBFBFB;
+  color: #0C0C0CE5;
   text-align: center;
   text-decoration: none;
-  border-color:  transparent ;
-  box-shadow: #23373B 1.5px 1.5px;
+  border-color: transparent;
+ 
   cursor: pointer;
-  font-size: 16px;
-  text-shadow: black 1.3px 1.3px;
+  font-size: 14px;
   margin-top: 2px;
-
 }
-
 
 .nav-button:hover {
   background-color: #5A9A88;

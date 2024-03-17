@@ -1,3 +1,4 @@
+
 <x-guest-layout>
 <p class="mb-4 text-lg text-gray-800 dark:text-gray-200">Welcome Back Doc!</p>
     <!-- Session Status -->
@@ -40,7 +41,7 @@
                 </a>
             @endif
 
-            <!-- Remove the Laravel logo and change the theme color -->
+            
             <x-primary-button class="ms-3" style="background-color: #68B2A0;">
                 {{ __('Log in') }}
             </x-primary-button>
