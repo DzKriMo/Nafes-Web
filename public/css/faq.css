@@ -44,10 +44,7 @@
   color: #FBFBFB;
   font-size: 14px;
 }
-.navbar-collapse.collapsing,
-.navbar-collapse.show {
-background-color: #f0f0f0e4; 
-}
+
 .nav-button {
   display: inline-block;
   border-radius: 20px;

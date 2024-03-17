@@ -47,20 +47,6 @@ blockquote {
 blockquote p {
     margin: 0;
 }
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000; 
-}
-
-.nav-link {
-color: #fff;
-}
-.navbar-collapse.collapsing,
-.navbar-collapse.show {
-background-color: #f0f0f0e4; 
-}
-
 .nav-button {
     display: inline-block;
     border-radius: 20px;
@@ -69,7 +55,7 @@ background-color: #f0f0f0e4;
     text-align: center;
     text-decoration: none;
     border-color: transparent;
-
+   
     cursor: pointer;
     font-size: 14px;
     margin-top: 2px;
@@ -82,4 +68,10 @@ background-color: #f0f0f0e4;
 .nav-link {
     color: #FBFBFB;
     font-size: 14px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
 }

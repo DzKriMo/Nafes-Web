@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('landing');
 })->name('index');
 
+
+
 Route::get('/patient', function () {
     return view('index');
 })->name('patient');

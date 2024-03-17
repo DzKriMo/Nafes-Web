@@ -67,7 +67,7 @@
 Exclusively Available on our App</p>
 <div class="video-container">
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-        <img src="/img/image.png" style="width: 50%; max-width: 400px;" />
+        <img src="/img/google.png" style="width: 50%; max-width: 400px;" />
     </a>
 </div><br><br>
     <br><br>

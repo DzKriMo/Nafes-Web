@@ -1,3 +1,4 @@
+
 html, body {
     font-family: 'Roboto Serif', serif;
     display: flex;
@@ -134,8 +135,9 @@ html, body {
 }
 #fourthContainer{
     min-width: 100vw;
-    min-height: 200vh;
+    min-height: 250vh;
     background-color: #f0f0f0;
+    margin:0;
     
 }
 #next-level {
@@ -146,7 +148,7 @@ html, body {
     margin: auto;
     border-radius: 30px; 
     overflow: hidden; 
-    margin-top: 20px;
+    margin-top: 100px;
     
     background-image: url('/img/nextlevel.png');
     background-size: contain; 
@@ -155,8 +157,139 @@ html, body {
     
 }
 
+#stats{
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+}
+.hh2{
+    color:#6FB6A5 ; 
+    font-weight: 600;
+}
+.hh4{
+    color: #6FB6A5
+}
+.pp{
+    font-size: 14px
+}
+#family, #better, #clients {
+    flex-grow: 1;
+    padding: 20px;
+    
+}
+#ramy{
+    display: flex;
+}
+#ramyImage{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+#arrowsContainer{
+   
+    min-width: 100%;
+    
+    margin:0;
+    display: flex;
+   
+}
+
+#arrows{
 
 
+min-width: 100px;
+margin: auto;
+display: flex;
+}
+
+#fifthContainer{
+    min-height: 80vh;
+    min-width: 100vw;
+}
+#subsCont{
+    margin-top: 50px;
+ display: flex;
+ min-width: 100vw;
+ min-height: 50vh;
+}
+#suub{
+    
+    display: flex;
+    margin: auto;
+}
+#hnafes{
+    color: #FBFBFB;
+    font-weight: 600;
+}
+#NafesContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#pnafes{
+    color: #FBFBFB;
+    font-size: 14px;
+}
+#subscribe{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+.email-subscribe {
+    display: flex;
+    
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .email-subscribe button[type="submit"] {
+    width: 80px;
+    height: 30px;
+    background-color: #0C0C0CE5;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: -90px;
+    margin-top: -4px;
+    z-index: 1;
+
+  }
+  
+  .email-subscribe input[type="email"] {
+    width: 300px;
+    height: 45px;
+    border-color: transparent;
+    border-radius: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-top: -5px;
+    position: relative;
+    z-index: 0;
+  }
+  #bottomcont{
+    display: flex;
+    
+  }
+  #bottom{
+    display: flex;
+    margin: auto;
+    width: 80vw;
+  }
+  #contactus{
+    flex: 1;
+  }
+  #address{
+    flex: 1;
+  }
+  .social{
+    width: 50px;
+    height: 50px;
+  }
+  
 
 @media (max-width: 968px) {
 
@@ -221,5 +354,27 @@ html, body {
     #core{
         margin-top: 50px;
     }
+    #stats{
+        flex-direction: column;
+        margin-top: -100px;
+    }
+    #next-level{
+        margin-top: -100px;
+    }
+    #fourthContainer{
+       
+        min-height: 280vh;
+        
+        
+    }
+    #suub{
+        flex-direction: column;
+    }
+    #bottom{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+   
 }
 

@@ -89,6 +89,88 @@
 
 <div class="container" id="fourthContainer">
     <div id="next-level"></div>
+    <div class="container" id="stats">
+        <div id="family">
+            <h2 class="hh2">200+</h2>
+            <h4 class="hh4">We're a family</h4>
+            <p class="pp">Our idea attract everyday hardworking <br>therapists from all over the country</p>
+        </div>
+
+        <div id="better">
+           <h2 class="hh2">80%</h2>
+           <h4 class="hh4">Better than traditional therapy</h4>
+           <p class="pp">Online therapy through nafes has provided <br> very optimistic numbers satisfiying both <br> the client and the therapist</p>            
+        </div>
+
+        <div id="clients">
+            <h2 class="hh2">10K+</h2>
+            <h4 class="hh4">Clients in shaa Allah</h4>
+            <p class="pp">Our services has connected thousands <br> of clients and therapists</p>
+        </div>
+
+    </div>
+<br><br><br><br><br>
+<div class="container" id="test">
+<div class="container" id="ramy">
+    <img src="/img/ramy.png" alt="ramy" id="ramyImage">
+</div>
+<br>
+<h4 class="hh2" style="text-align: center">“Be genuine in your assessment, and provide constructive feedback to benefit both potential customers and the company providing the product or service.”</h2>
+<br>
+<h6 class="hh2" style="text-align: center">Rami feghali</h6>
+
+<p class="pp" style="text-align: center"> sadi9 el Co founder of <br> Nafes</p>
+
+
+
+<div id="arrowsContainer">
+    <div id="arrows">
+        <img src="/img/left.png" alt="left" style="width:44px; height:44px; margin-left:-5px; margin-right:5px;">
+        <br><br>
+        <img src="/img/right.png" alt="right" style="width:44px; height:44px; margin-left:5px; margin-right:-5px;">
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="container" id="fifthContainer">
+    <div class="container" id="subsCont">
+        <div class="container" id="suub">
+            <div id="NafesContainer">
+            <h1 id="hnafes">Nafes</h1>
+            <p id="pnafes">We’re a team of students that wants to <br> develop the therapy culture in Algeria</p>
+        </div>
+
+        <div id="subscribe">
+            <h6 style="color: #FBFBFB;">Subscribe</h6>
+            <div class="email-subscribe">
+                <input type="email" placeholder="Enter your email here" required>
+                <button type="submit">Subscribe</button>
+              </div>
+        </div>
+        </div>
+    </div>
+    <hr style="border-color: white;margin-left: 8%;margin-right:8%;">
+    <div id="bottomcont">
+    <div id="bottom">
+        <div id="contactus">
+            <h5 style="color: #FBFBFB">Contact Us</h5>
+            <p style="color: #FBFBFB; font-size:12px;">+21379758587</p>
+        </div>
+        <div id="address">
+            <h5 style="color:#FBFBFB">Address</h5>
+            <p style="color: #FBFBFB; font-size:12px">10 rue de châteaudun Clermont-Ferrand</p>
+        </div>
+        <div id="socials">
+            <a href="#"><img src="/img/facebook.png" alt="facebook" class="social"></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="social" src="/img/instagram.png" alt="intagram"></a>
+            <a href="#"><img src="/img/linkedin.png" alt="linkedin" class="social"></a>
+        </div>
+    </div>
+</div>
+<br>
 </div>
 
 
