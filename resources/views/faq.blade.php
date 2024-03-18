@@ -14,9 +14,9 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #68b29f8f; border-radius: 15px; margin: 5px; positon: absolute;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; border-radius: 10px;">
     
-        <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #FFFFFF;">Nafes</a>
+        <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;">Nafes</a>
     
         <!-- Toggler button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -28,18 +28,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto mr-auto text-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}"style="color: #FBFBFB">About</a>
+                    <a class="nav-link" href="{{ route('about') }}"style="color: #0C0C0CE5">About</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('faq') }}" style="color: #FBFBFB">FAQ</a>
+                    <a class="nav-link" href="{{ route('faq') }}" style="color: #0C0C0CE5">FAQ</a>
                 </li>
+    
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('patient') }}" style="color: #FBFBFB">I'm a Patient</a>
+                    <a class="nav-link" href="{{ route('patient') }}" style="color: #0C0C0CE5">I'm a Patient</a>
                 </li>
               
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact"style="color: #FBFBFB">Contact us</a>
+                    <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"style="color: #0C0C0CE5">Contact us</a>
                 </li>
             </ul>
         </div>

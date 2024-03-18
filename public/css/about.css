@@ -50,7 +50,7 @@ blockquote p {
 .nav-button {
     display: inline-block;
     border-radius: 20px;
-    background-color: #FBFBFB;
+    background-color:  #5A9A88;
     color: #0C0C0CE5;
     text-align: center;
     text-decoration: none;
@@ -62,11 +62,11 @@ blockquote p {
 }
 
 .nav-button:hover {
-    background-color: #5A9A88;
+    background-color:#FBFBFB ;
 }
 
 .nav-link {
-    color: #FBFBFB;
+    color: #0C0C0CE5;
     font-size: 14px;
 }
 
@@ -74,4 +74,23 @@ blockquote p {
     position: sticky;
     top: 0;
     z-index: 1000; 
+}
+.navbar-nav .nav-item .nav-link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    
+    position: relative;
+    color: #0C0C0CE5;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    bottom: -2px;
+    background-color: #68B2A0;
+    height: 2px;
 }

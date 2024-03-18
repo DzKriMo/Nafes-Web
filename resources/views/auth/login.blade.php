@@ -1,4 +1,3 @@
-
 <x-guest-layout>
 <p class="mb-4 text-lg text-gray-800 dark:text-gray-200">Welcome Back Doc!</p>
     <!-- Session Status -->
@@ -14,7 +13,7 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        <!-- Password -->a
+        <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
 
