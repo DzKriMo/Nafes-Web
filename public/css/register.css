@@ -1,18 +1,23 @@
 :root {
     --background-color: #fbfbfb; 
     --text-color: #333; 
+    --image-filter: invert(100%);
   }
   
   @media (prefers-color-scheme: dark) {
     :root {
       --background-color: #212020; 
       --text-color: #fff;
+      --image-filter: none;
     }
   }
 
 body {
     font-family: 'Roboto Serif', serif;
     background-color: #68B2A0;
+}
+#topLogo{
+    filter: var(--image-filter);
 }
 
 #formContainer {
@@ -32,6 +37,7 @@ body {
     width: 90%; 
     max-width: 600px; 
     min-height: 500px;
+    max-height: 700px;
     border-radius: 20px;
     background-color: var(--background-color); 
     color: var(--text-color);
@@ -48,20 +54,22 @@ body {
 }
 
 #square-div label {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
    
 }
 
 #square-div input,
 #square-div button,
 #square-div a {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     width: 100%; 
     max-width: 300px; 
     border-radius: 10px;
     padding: 10px;
 }
-
+.mt-2{
+    max-width: 300px; 
+}
 #Rbutton {
     display: inline-block;
     border-radius: 10px;

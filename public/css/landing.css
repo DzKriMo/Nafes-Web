@@ -1,12 +1,17 @@
 :root {
     --background-color: #fbfbfb; 
     --text-color: #333; 
+
+    --invbackground-color: #212020; 
+      --invtext-color: #fff;
   }
   
   @media (prefers-color-scheme: dark) {
     :root {
       --background-color: #212020; 
       --text-color: #fff;
+      --invbackground-color: #fbfbfb; 
+      --invtext-color: #333; 
     }
   }
 html, body {
@@ -211,6 +216,9 @@ html, body {
     padding: 20px;
     
 }
+#email-input{
+    background-color: var(--background-color);
+}
 #ramy{
     display: flex;
 }
@@ -282,8 +290,8 @@ display: flex;
   .email-subscribe button[type="submit"] {
     width: 80px;
     height: 30px;
-    background-color: #0C0C0CE5;
-    color: #fff;
+    background-color: var(--invbackground-color);
+    color: var(--invtext-color);
     border: none;
     border-radius: 30px;
     font-size: 12px;

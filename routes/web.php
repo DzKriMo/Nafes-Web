@@ -32,6 +32,10 @@ Route::get('/registerpage', function () {
     return view('registerPage');
 })->name('rp');
 
+Route::get('/loginpage', function () {
+    return view('loginPage');
+})->name('lp');
+
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');

@@ -146,7 +146,7 @@
         <div id="subscribe">
             <h6 style="color: #FBFBFB;">Subscribe</h6>
             <div class="email-subscribe">
-                <input type="email" placeholder="Enter your email here" required>
+                <input type="email" placeholder="Enter your email here" required id="email-input">
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="z-index: 3;"><button type="submit">Subscribe</button></a>
               </div>
         </div>

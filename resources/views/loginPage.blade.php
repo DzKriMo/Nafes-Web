@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Register to Nafes</title>
+        <title>Login to Nafes</title>
         <link rel="icon" type="image/x-icon" href="/img/logo.ico">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,15 +17,13 @@
         
        
     
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('login') }}">
             @csrf
     
             <img src="/img/logo.png" alt="logo" style="width: 40px; height:40px;margin-top:20px; " id="topLogo">
 
-            <h2 style="text-align: center; padding:10px">Become a Nafes Therapist!</h2>
-            <label for="name">Name
-            </label>
-            <input id="name" type="text" name="name" required autofocus>
+            <h2 style="text-align: center; padding:10px">Welcome back Doc!.</h2>
+           
     
             
             <label for="email">Email
@@ -40,14 +38,12 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
     
            
-            <label for="password_confirmation">Confirm Password</label>
-            <input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password">
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
            
-            <a href="{{ route('lp') }}" style="text-align: center">Already registered?</a>
+           
+            <a href="{{ route('rp') }}" style="text-align: center">Don't Have an account?</a>
     
            
-            <button type="submit" id="Rbutton">Register</button>
+            <button type="submit" id="Rbutton">Login</button>
         </form>
     </div>
 </div>
