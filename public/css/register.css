@@ -1,0 +1,109 @@
+:root {
+    --background-color: #fbfbfb; 
+    --text-color: #333; 
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #212020; 
+      --text-color: #fff;
+    }
+  }
+
+body {
+    font-family: 'Roboto Serif', serif;
+    background-color: #68B2A0;
+}
+
+#formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    background-image: url("/img/registerBack.png");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#square-div {
+    width: 90%; 
+    max-width: 600px; 
+    min-height: 500px;
+    border-radius: 20px;
+    background-color: var(--background-color); 
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 10px; 
+    box-sizing: border-box; 
+    box-shadow: 0px 0px 20px 20px rgba(251, 251, 251, 0.7);
+}
+
+#square-div form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#square-div label {
+    margin-bottom: 10px;
+   
+}
+
+#square-div input,
+#square-div button,
+#square-div a {
+    margin-bottom: 20px;
+    width: 100%; 
+    max-width: 300px; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#Rbutton {
+    display: inline-block;
+    border-radius: 10px;
+    background-color:  #5A9A88;
+    color: #0C0C0C;
+    text-align: center;
+    text-decoration: none;
+    border-color: transparent;
+   
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+#Rbutton:hover {
+    background-color:#0c0c0c ;
+    color: #fbfbfb;
+}
+
+@media screen and (max-width: 768px) {
+    
+    #square-div {
+        width: 80%;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        
+    }
+
+    #square-div label {
+        margin-left: 0; 
+    }
+    #square-div h2 {
+        font-size: 20px ; 
+    }
+
+    #square-div input,
+    #square-div button,
+    #square-div a {
+        max-width: 100%;
+        margin-bottom: 5px;
+        padding: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}

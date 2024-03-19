@@ -1,4 +1,14 @@
-
+:root {
+    --background-color: #fbfbfb; 
+    --text-color: #333; 
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #212020; 
+      --text-color: #fff;
+    }
+  }
 html, body {
     font-family: 'Roboto Serif', serif;
     display: flex;
@@ -9,6 +19,8 @@ html, body {
     background-color: #68B2A0;
     overflow-x: hidden; 
 }
+
+
 
 .nav-button {
     display: inline-block;
@@ -25,7 +37,7 @@ html, body {
 }
 
 .nav-button:hover {
-    background-color:#FBFBFB ;
+    background-color:#F4F4F4 ;
 }
 
 .nav-link {
@@ -70,12 +82,14 @@ html, body {
 
 #secondContainer {
     flex: 1;
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
     background-size: 100%,100%;
     min-height: 100vh; 
     min-width: 100vw;
     color: #68B2A0;
 }
+
+
 #thirdContainer {
     flex: 1;
     background-image: url("/img/thirdd.png");
@@ -155,7 +169,7 @@ html, body {
 #fourthContainer{
     min-width: 100vw;
     min-height: 250vh;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
     margin:0;
     
 }
@@ -189,7 +203,8 @@ html, body {
     color: #6FB6A5
 }
 .pp{
-    font-size: 14px
+    font-size: 14px;
+    color: var(--text-color);
 }
 #family, #better, #clients {
     flex-grow: 1;
@@ -221,6 +236,8 @@ min-width: 100px;
 margin: auto;
 display: flex;
 }
+
+
 
 #fifthContainer{
     min-height: 80vh;

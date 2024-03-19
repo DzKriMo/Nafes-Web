@@ -28,6 +28,10 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/registerpage', function () {
+    return view('registerPage');
+})->name('rp');
+
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');

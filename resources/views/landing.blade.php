@@ -14,7 +14,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; border-radius: 10px;">
     
-    <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;">Nafes</a>
+    <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;"><img src="/img/logo.png" alt="logo" style="width: 30px; height:30px; filter: invert(100%);"> Nafes</a>
 
     <!-- Toggler button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -63,7 +63,7 @@
 <h1 id="ready">Ready to work with us <br><br>
     and help others?</h1>
     <p id="please">Please start the procedure so you can be a professional <br> therapist in Nafes</p>
-    <a href="{{route('register')}}"><button id="getStartedButton" >Get Started with us</button></a>
+    <a href="{{route('rp')}}"><button id="getStartedButton" >Get Started with us</button></a>
 
 
 
@@ -115,19 +115,19 @@
     <img src="/img/ramy.png" alt="ramy" id="ramyImage">
 </div>
 <br>
-<h4 class="hh2" style="text-align: center">“Be genuine in your assessment, and provide constructive feedback to benefit both potential customers and the company providing the product or service.”</h2>
+<h4 class="hh2" style="text-align: center" id="speech">“Be genuine in your assessment, and provide constructive feedback to benefit both potential customers and the company providing the product or service.”</h4>
 <br>
-<h6 class="hh2" style="text-align: center">Rami feghali</h6>
+<h6 class="hh2" style="text-align: center" id="Name">Rami feghali</h6>
 
-<p class="pp" style="text-align: center"> sadi9 el Co founder of <br> Nafes</p>
+<p class="pp" style="text-align: center" id="bio"> sadi9 el Co founder of <br> Nafes</p>
 
 
 
 <div id="arrowsContainer">
     <div id="arrows">
-        <img src="/img/left.png" alt="left" style="width:44px; height:44px; margin-left:-5px; margin-right:5px;">
+        <img src="/img/left.png" alt="left" style="width:44px; height:44px; margin-left:-5px; margin-right:5px;" id="left" onclick="left()">
         <br><br>
-        <img src="/img/right.png" alt="right" style="width:44px; height:44px; margin-left:5px; margin-right:-5px;">
+        <img src="/img/right.png" alt="right" style="width:44px; height:44px; margin-left:5px; margin-right:-5px; " id="right" onclick="right()">
     </div>
 </div>
 
@@ -139,7 +139,7 @@
     <div class="container" id="subsCont">
         <div class="container" id="suub">
             <div id="NafesContainer">
-            <h1 id="hnafes">Nafes</h1>
+            <h1 id="hnafes"> <img src="/img/logo.png" alt="logo" style="width: 45px; height:45px"> Nafes</h1>
             <p id="pnafes">We’re a team of students that wants to <br> develop the therapy culture in Algeria</p>
         </div>
 
@@ -147,7 +147,7 @@
             <h6 style="color: #FBFBFB;">Subscribe</h6>
             <div class="email-subscribe">
                 <input type="email" placeholder="Enter your email here" required>
-                <button type="submit">Subscribe</button>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="z-index: 3;"><button type="submit">Subscribe</button></a>
               </div>
         </div>
         </div>
@@ -179,5 +179,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="/js/landing.js"></script>
 
 </html>

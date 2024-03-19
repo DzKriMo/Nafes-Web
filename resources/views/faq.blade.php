@@ -16,7 +16,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; border-radius: 10px;">
     
-        <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;">Nafes</a>
+        <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;"><img src="/img/logo.png" alt="logo" style="width: 30px; height:30px; filter: invert(100%);"> Nafes</a>
     
         <!-- Toggler button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
