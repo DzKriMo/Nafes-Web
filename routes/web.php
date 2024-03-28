@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('landing');
 })->name('index');
 
+Route::get('/chat', function () {
+    return view('chat');
+})->name('chat');
+
 
 
 Route::get('/patient', function () {
@@ -49,5 +53,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/api/user-id', function () {
+    return auth()->user()->id;
+})->middleware('auth');
+
 
 require __DIR__.'/auth.php';
