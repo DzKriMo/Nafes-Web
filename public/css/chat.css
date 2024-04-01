@@ -131,9 +131,12 @@ body {
     color: #fff;
     padding: 8px;
     border-radius: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    word-wrap: break-word; 
+    align-self: flex-end; 
+    margin-left: auto; 
     max-width: 60%;
-    margin-left: 40%;
+    width: fit-content; 
 }
 
 .received-message {
@@ -143,6 +146,9 @@ body {
     border-radius: 10px;
     margin-bottom: 5px;
     max-width: 60%;
+    word-wrap: break-word; 
+    align-self: flex-start; 
+    width: fit-content; 
 }
 
 @media screen and (max-width: 768px) {
