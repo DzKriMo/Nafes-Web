@@ -24,7 +24,7 @@ function right() {
 */
 
 function videoChat(){
-  window.open("https://nafes-59aaa.web.app/", '_blank');
+  window.open("https://nafas-therapy.web.app/", '_blank');
 }
 
 
