@@ -48,7 +48,7 @@ body {
 
 .user-list {
     flex: 1;
-
+    
     margin-right: 50px;
    
 }
@@ -59,6 +59,7 @@ body {
     margin-top: 10px;
     overflow-y: scroll;
     overflow-x: hidden;
+    max-height: 70%;
 }
 
 #userList li {
@@ -120,6 +121,7 @@ body {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 #vidBtn:hover {
@@ -152,24 +154,34 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    #Big-Container {
+       
+        height: 130vh;
+   
+    }
     #chatt-container {
         flex-direction: column-reverse;
+      
     }
 
     .chat-container {
         width: 100%;
         flex: 1;
+        min-height: 50vh;
         
     }
     #chatt-container {
         height: 150vh;
     }
-    #Big-Container{
-        height: 120vh;
-    }
+    
 
     .user-list {
         margin-top: 10%;
         width: 100%;
+        flex: 1;
     }
+    #userList{
+        max-height: 40vh;
+    }
+   
 }

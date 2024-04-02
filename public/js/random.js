@@ -208,16 +208,15 @@ function videoChat(){
 
 
 
-
-                                                                                                                                    const firebaseConfig = {
-                                                                                                                                    apiKey: "AIzaSyDmzv4pNcArlPiAlmVJoAzPaGC9axknz_A",
-                                                                                                                                    authDomain: "nafes-59aaa.firebaseapp.com",
-                                                                                                                                    databaseURL: "https://nafes-59aaa-default-rtdb.europe-west1.firebasedatabase.app",
-                                                                                                                                    projectId: "nafes-59aaa",
-                                                                                                                                    storageBucket: "nafes-59aaa.appspot.com",
-                                                                                                                                     messagingSenderId: "342707494946",
-                                                                                                                                     appId: "1:342707494946:web:ee76897b8c98d7c5f2aa7b",
-                                                                                                                                     measurementId: "G-FN2HQK4Q6Q"
-                                                                                                                                      };
+const firebaseConfig = {
+  apiKey: "AIzaSyBwJk-EfuBxl1ZpRaPA1D3wN28W3zfLgPY",
+  authDomain: "nafas-therapy.firebaseapp.com",
+  databaseURL: "https://nafas-therapy-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "nafas-therapy",
+  storageBucket: "nafas-therapy.appspot.com",
+  messagingSenderId: "103094928908",
+  appId: "1:103094928908:web:4e8f1e841d2c7cc6ef1029",
+  measurementId: "G-JY5VVWB9RJ"
+};
 
 

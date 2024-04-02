@@ -32,8 +32,8 @@ function fetchUsers() {
     usersRef.once('value', (snapshot) => {
         snapshot.forEach((userSnapshot) => {
             const userId = userSnapshot.key;
-            if (userId !== CurrentUserId && !uniqueUsers.includes(userId)) {
-                const user = userSnapshot.val();
+            const user = userSnapshot.val();
+            if (userId !== CurrentUserId && !uniqueUsers.includes(userId) && user.therapistID == CurrentUserId ) {
                 const li = document.createElement('li');
                 li.textContent = `${user.username} - ${user.email}`;
                 li.addEventListener('click', () => startChat(userId, user));
