@@ -16,7 +16,6 @@ axios.get('/api/user-id')
         }
     });
 
-
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
@@ -44,7 +43,6 @@ function fetchUsers() {
     });
 }
 
-
 function startChat(userId, selectedUser) {
     otherUser = userId;
     console.log("Other User ID:", otherUser);
@@ -52,11 +50,9 @@ function startChat(userId, selectedUser) {
 
     document.getElementById('contactName').textContent = `Chat with: ${userName}`;
 
-
     const chatMessages = document.getElementById('chatMessages');
     chatMessages.innerHTML = '';
 
-    
     const chatRef = database.ref('Chats').child(CurrentUserId).child(otherUser);
     chatRef.once('value', (snapshot) => {
         snapshot.forEach((messageSnapshot) => {
@@ -65,13 +61,10 @@ function startChat(userId, selectedUser) {
         });
     });
 
-    
     listenForMessages();
 }
 
-
-
-function sendMessage(userId, message, file = null) {
+function sendMessage(userId, message, file = null, audioBlob = null) {
     const chatRefSender = database.ref('Chats').child(CurrentUserId).child(userId);
     const chatRefReceiver = database.ref('Chats').child(userId).child(CurrentUserId);
 
@@ -86,15 +79,29 @@ function sendMessage(userId, message, file = null) {
         storageRef.put(file)
             .then(snapshot => snapshot.ref.getDownloadURL())
             .then(url => {
-                messageData.message= file.name;
+                messageData.message = file.name;
                 messageData.messageLink = url;
                 chatRefSender.push(messageData)
-                    .then(() => console.log('Message sent successfully'))
-                    .catch(error => console.error('Error sending message:', error));
+                    .then(() => console.log('File sent successfully'))
+                    .catch(error => console.error('Error sending file:', error));
 
                 chatRefReceiver.push(messageData);
             })
             .catch(error => console.error('Error uploading file:', error));
+    } else if (audioBlob) {
+        const storageRef = firebase.storage().ref(`audio/${Date.now()}_audio`);
+        storageRef.put(audioBlob)
+            .then(snapshot => snapshot.ref.getDownloadURL())
+            .then(url => {
+                messageData.message = message;
+                messageData.audioUrl = url;
+                chatRefSender.push(messageData)
+                    .then(() => console.log('Audio sent successfully'))
+                    .catch(error => console.error('Error sending audio:', error));
+
+                chatRefReceiver.push(messageData);
+            })
+            .catch(error => console.error('Error uploading audio:', error));
     } else {
         chatRefSender.push(messageData)
             .then(() => console.log('Message sent successfully'))
@@ -104,7 +111,6 @@ function sendMessage(userId, message, file = null) {
     }
 }
 
-
 function listenForMessages() {
     const chatRef = database.ref('Chats').child(CurrentUserId).child(otherUser);
 
@@ -113,7 +119,6 @@ function listenForMessages() {
         displayMessage(message);
     });
 }
-
 
 function displayMessage(message) {
     const chatMessages = document.getElementById('chatMessages');
@@ -154,10 +159,9 @@ function displayMessage(message) {
         } else if (message.audioUrl) {
             const audioElement = document.createElement('audio');
             audioElement.src = message.audioUrl;
-            messageElement.textContent = message.message;
-            audioElement.play = true ;
             audioElement.controls = true;
 
+            messageElement.textContent = message.message;
             messageElement.appendChild(audioElement);
         } else {
             messageElement.textContent = message.message;
@@ -168,24 +172,71 @@ function displayMessage(message) {
     }
 }
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     fetchUsers();
 
-    // Trigger file upload when image is clicked
     const fileUploadInput = document.getElementById('file-upload');
-    const uploadTrigger = document.getElementById('uploadTrigger');
-
-    uploadTrigger.addEventListener('click', () => {
-        fileUploadInput.click();
-    });
+    const audioRecordBtn = document.getElementById('recordButton');
+    const audioPlayer = document.getElementById('audio-player');
 
     fileUploadInput.addEventListener('change', (event) => {
         const file = event.target.files[0];
         if (file) {
             sendMessage(otherUser, file.name, file);
+        }
+    });
+
+    audioRecordBtn.addEventListener('click', async () => {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            const mediaRecorder = new MediaRecorder(stream);
+            const audioChunks = [];
+
+            mediaRecorder.addEventListener('dataavailable', event => {
+                if (event.data.size > 0) {
+                    audioChunks.push(event.data);
+                }
+            });
+
+            mediaRecorder.addEventListener('stop', async () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+
+
+
+
+                let currentDate = new Date();
+
+                
+                let day = currentDate.getDate();
+                let month = currentDate.getMonth() + 1; 
+                let year = currentDate.getFullYear();
+                let hours = currentDate.getHours();
+                let minutes = currentDate.getMinutes();
+                
+                
+                day = day < 10 ? '0' + day : day;
+                month = month < 10 ? '0' + month : month;
+                hours = hours < 10 ? '0' + hours : hours;
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                
+                
+                let formattedDateTime = `${day}/${month}/${year} ${hours}:${minutes}`;
+
+
+
+
+                sendMessage(otherUser, formattedDateTime, null, audioBlob);
+
+                audioPlayer.src = URL.createObjectURL(audioBlob);
+            });
+
+            mediaRecorder.start();
+            setTimeout(() => {
+                mediaRecorder.stop();
+                stream.getTracks().forEach(track => track.stop());
+            }, 5000); // Record for 5 seconds
+        } catch (error) {
+            console.error('Error recording audio:', error);
         }
     });
 

@@ -34,6 +34,7 @@
             <div class="chat-input">
                 <textarea id="messageInput" placeholder="Type your message..."></textarea>
                 <img src="/img/clip.svg" alt="Upload Files" id="uploadTrigger">
+                <img src="/img/record.svg" alt="record audio" id="recordButton">
                 <input type="file" id="file-upload" style="display: none">
                 <button id="sendMessageBtn">Send</button>
             </div>
