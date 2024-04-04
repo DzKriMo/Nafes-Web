@@ -33,6 +33,8 @@
             <div class="chat-messages" id="chatMessages"></div>
             <div class="chat-input">
                 <textarea id="messageInput" placeholder="Type your message..."></textarea>
+                <img src="/img/clip.svg" alt="Upload Files" id="uploadTrigger">
+                <input type="file" id="file-upload" style="display: none">
                 <button id="sendMessageBtn">Send</button>
             </div>
       
@@ -56,6 +58,7 @@
 </div>
 <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-storage.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="/js/random.js"></script>

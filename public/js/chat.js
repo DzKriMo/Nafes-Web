@@ -52,11 +52,11 @@ function startChat(userId, selectedUser) {
 
     document.getElementById('contactName').textContent = `Chat with: ${userName}`;
 
-    // Clear chat messages before fetching old messages
+
     const chatMessages = document.getElementById('chatMessages');
     chatMessages.innerHTML = '';
 
-    // Fetching and displaying old messages
+    
     const chatRef = database.ref('Chats').child(CurrentUserId).child(otherUser);
     chatRef.once('value', (snapshot) => {
         snapshot.forEach((messageSnapshot) => {
@@ -65,13 +65,13 @@ function startChat(userId, selectedUser) {
         });
     });
 
-    // Listening for real-time messages
+    
     listenForMessages();
 }
 
 
-// Send message to the current chat
-function sendMessage(userId, message) {
+
+function sendMessage(userId, message, file = null) {
     const chatRefSender = database.ref('Chats').child(CurrentUserId).child(userId);
     const chatRefReceiver = database.ref('Chats').child(userId).child(CurrentUserId);
 
@@ -81,14 +81,30 @@ function sendMessage(userId, message) {
         message: message,
     };
 
-    chatRefSender.push(messageData)
-        .then(() => console.log('Message sent successfully'))
-        .catch(error => console.error('Error sending message:', error));
+    if (file) {
+        const storageRef = firebase.storage().ref(`files/${Date.now()}_${file.name}`);
+        storageRef.put(file)
+            .then(snapshot => snapshot.ref.getDownloadURL())
+            .then(url => {
+                messageData.message= file.name;
+                messageData.messageLink = url;
+                chatRefSender.push(messageData)
+                    .then(() => console.log('Message sent successfully'))
+                    .catch(error => console.error('Error sending message:', error));
 
-    chatRefReceiver.push(messageData);
+                chatRefReceiver.push(messageData);
+            })
+            .catch(error => console.error('Error uploading file:', error));
+    } else {
+        chatRefSender.push(messageData)
+            .then(() => console.log('Message sent successfully'))
+            .catch(error => console.error('Error sending message:', error));
+
+        chatRefReceiver.push(messageData);
+    }
 }
 
-// Listen for new messages and updating the chat interface
+
 function listenForMessages() {
     const chatRef = database.ref('Chats').child(CurrentUserId).child(otherUser);
 
@@ -114,21 +130,64 @@ function displayMessage(message) {
 
         if (message.senderId === CurrentUserId) {
             messageElement.classList.add('sent-message');
-            
         } else {
             messageElement.classList.add('received-message');
-         
         }
 
-        messageElement.textContent = message.message;
+        if (message.messageLink) {
+            const linkElement = document.createElement('a');
+            linkElement.href = message.messageLink;
+            linkElement.textContent = message.message;
+
+            linkElement.style.fontWeight = 'bold';
+            linkElement.style.textDecoration = 'underline';
+            linkElement.style.color = 'blue';
+
+            linkElement.addEventListener('mouseenter', () => {
+                linkElement.style.color = 'darkblue';
+            });
+            linkElement.addEventListener('mouseleave', () => {
+                linkElement.style.color = 'blue';
+            });
+
+            messageElement.appendChild(linkElement);
+        } else if (message.audioUrl) {
+            const audioElement = document.createElement('audio');
+            audioElement.src = message.audioUrl;
+            messageElement.textContent = message.message;
+            audioElement.play = true ;
+            audioElement.controls = true;
+
+            messageElement.appendChild(audioElement);
+        } else {
+            messageElement.textContent = message.message;
+        }
+
         chatMessages.appendChild(messageElement);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 }
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchUsers();
+
+    // Trigger file upload when image is clicked
+    const fileUploadInput = document.getElementById('file-upload');
+    const uploadTrigger = document.getElementById('uploadTrigger');
+
+    uploadTrigger.addEventListener('click', () => {
+        fileUploadInput.click();
+    });
+
+    fileUploadInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            sendMessage(otherUser, file.name, file);
+        }
+    });
 
     document.getElementById('sendMessageBtn').addEventListener('click', () => {
         const messageInput = document.getElementById('messageInput');
