@@ -1,23 +1,22 @@
 let CurrentUserId;
 let otherUser; 
 
-let currentDate = new Date();
+function updateDateTime() {
+    let currentDate = new Date();
+    let day = currentDate.getDate();
+    let month = currentDate.getMonth() + 1;
+    let year = currentDate.getFullYear();
+    let hours = currentDate.getHours();
+    let minutes = currentDate.getMinutes();
 
-                
-let day = currentDate.getDate();
-let month = currentDate.getMonth() + 1; 
-let year = currentDate.getFullYear();
-let hours = currentDate.getHours();
-let minutes = currentDate.getMinutes();
+    day = day < 10 ? '0' + day : day;
+    month = month < 10 ? '0' + month : month;
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
 
-
-day = day < 10 ? '0' + day : day;
-month = month < 10 ? '0' + month : month;
-hours = hours < 10 ? '0' + hours : hours;
-minutes = minutes < 10 ? '0' + minutes : minutes;
-
-
-let formattedDateTime = `${day}/${month}/${year} ${hours}:${minutes}`;
+    let formattedDateTime = `${day}/${month}/${year} ${hours}:${minutes}`;
+    return formattedDateTime;
+}
 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
 
@@ -71,15 +70,16 @@ function startChat(userId, selectedUser) {
     const chatMessages = document.getElementById('chatMessages');
     chatMessages.innerHTML = '';
 
-    const chatRef = database.ref('Chats').child(CurrentUserId).child(otherUser);
+    /*const chatRef = database.ref('Chats').child(CurrentUserId).child(otherUser);
     chatRef.once('value', (snapshot) => {
         snapshot.forEach((messageSnapshot) => {
             const message = messageSnapshot.val();
             displayMessage(message);
         });
-    });
+    });*/
 
-    //listenForMessages();
+    displayedMessages.clear();
+    listenForMessages();
 }
 
 function sendMessage(userId, message, file = null, audioBlob = null) {
@@ -90,7 +90,7 @@ function sendMessage(userId, message, file = null, audioBlob = null) {
         senderId: CurrentUserId,
         receiverId: userId,
         message: message,
-        timestamp: formattedDateTime,
+        timestamp: updateDateTime(),
     };
 
     if (file) {
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
     
                 
-                await sendMessage(otherUser, formattedDateTime, null, audioBlob);
+                await sendMessage(otherUser, updateDateTime(), null, audioBlob);
     
                
                 audioPlayer.src = URL.createObjectURL(audioBlob);
