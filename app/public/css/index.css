@@ -1,0 +1,82 @@
+.therapy-options {
+    text-align: center;
+    margin-top: 50px;
+  }
+body{
+  background-color: #68B2A0;
+  background-image: url("/img/back.png");
+  font-family: 'Roboto Serif', serif;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ margin: 0;
+ 
+
+}
+  
+ 
+.nav-button {
+  display: inline-block;
+  border-radius: 20px;
+  background-color:  #5A9A88;
+  color: #0C0C0CE5;
+  text-align: center;
+  text-decoration: none;
+  border-color: transparent;
+ 
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.nav-button:hover {
+  background-color:#FBFBFB ;
+}
+
+.nav-link {
+  color: #0C0C0CE5;
+  font-size: 14px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+}
+.navbar-nav .nav-item .nav-link {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  
+  position: relative;
+  color: #0C0C0CE5;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+  bottom: -2px;
+  background-color: #68B2A0;
+  height: 2px;
+}
+
+.container {
+  flex: 1; 
+  background-image: url("/img/bck.png");
+  background-size: cover;
+  background-position: center;
+}
+.video-container {
+  text-align: center;
+}
+
+.video-container img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
