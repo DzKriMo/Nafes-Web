@@ -85,14 +85,90 @@ html, body {
     min-width: 100vw;
 }
 
-#secondContainer {
+#PostContainer {
     flex: 1;
     background-color: var(--background-color);
     background-size: 100%,100%;
-    min-height: 100vh; 
+    min-height: 110vh; 
     min-width: 100vw;
     color: #68B2A0;
+    
 }
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc; 
+  border-radius: 10px; 
+}
+
+
+::-webkit-scrollbar-corner {
+  background-color: transparent; 
+}
+
+#secondContainer {
+    display: grid;
+
+    gap:35px;
+    overflow-x: scroll;
+    padding: 20px;
+    background-color: rgba(57, 57, 57, 0.218);
+    border-radius: 10px;
+    white-space: nowrap;
+    
+ 
+   
+    scrollbar-width: thin; 
+  scrollbar-color: #ccc transparent; 
+}
+
+
+#secondContainer::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+
+#secondContainer::-webkit-scrollbar-thumb {
+  background-color: #ccc; 
+  border-radius: 10px; 
+}
+
+
+#secondContainer::-webkit-scrollbar-corner {
+  background-color: transparent; 
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block; 
+    height: 100%;
+    width: 100%; 
+    overflow-wrap: break-word; 
+  white-space: pre-wrap;
+}
+
+.post h2, .post p {
+    color: #0c0c0c;
+    margin-bottom: 10px;
+}
+
+.post small {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
 
 
 #thirdContainer {
@@ -375,6 +451,8 @@ display: flex;
        
 
     }
+
+
 
     #thirdContainer {
         flex: 1;
