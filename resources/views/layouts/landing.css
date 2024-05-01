@@ -9,12 +9,11 @@
   
   @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #fbfbfb; 
-        --text-color: #333; 
-    
-        --invbackground-color: #212020; 
-          --invtext-color: #fff;
-          --image-filter: invert(100%);
+      --background-color: #212020; 
+      --text-color: #fff;
+      --invbackground-color: #fbfbfb; 
+      --invtext-color: #333; 
+      --image-filter: none;
     }
   }
 html, body {
@@ -27,12 +26,7 @@ html, body {
     background-color: #68B2A0;
     overflow-x: hidden; 
 }
-#test{
-    background-color: #F4F4F4;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+
 
 
 .nav-button {
@@ -43,7 +37,7 @@ html, body {
     text-align: center;
     text-decoration: none;
     border-color: transparent;
-    
+   
     cursor: pointer;
     font-size: 14px;
     margin-top: 2px;
@@ -87,10 +81,9 @@ html, body {
     flex: 1;
     background-image: url("/img/first.png");
     background-size: 100%,100%;
-    
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 120vh; 
+    min-height: 100vh; 
     min-width: 100vw;
 }
 
@@ -312,7 +305,6 @@ width: 158.1px;
 height:145.8px;
     margin: auto;
     
-    
 }
 .ramyyy{
 filter: var(--image-filter);
@@ -505,15 +497,6 @@ display: flex;
         min-height: 280vh;
         
         
-    }
-    #loginButtonContainer{
-    display: flex;
-    
-    }
-    #loginButtonContainerr{
-     margin: auto;
-     padding-left: 20px;
-     
     }
     #suub{
         flex-direction: column;

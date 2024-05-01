@@ -28,6 +28,10 @@ Route::get('/patient', function () {
     return view('index');
 })->name('patient');
 
+Route::get('/getStarted', function () {
+    return view('getStarted');
+})->name('getStarted');
+
 Route::get('/about', function () {
     return view('about');
 })->name('about');
