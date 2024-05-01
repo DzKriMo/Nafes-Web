@@ -160,8 +160,46 @@ function displayMessage(message) {
         linkElement.href = message.messageLink;
         linkElement.textContent = message.message;
         applyLinkStyles(linkElement);
+        console.log(message.messageLink)
+        const imageExtensions = ['image','png', 'jpg', 'jpeg', 'gif', 'bmp', 'img' ];
+        const videoExtensions = ['mp4', 'webm', 'ogg', 'avi'];
+        let isImage = false;
+        let isVideo = false;
 
-        messageElement.appendChild(linkElement);
+        // Checking if the message link contains an image extension
+        imageExtensions.forEach(extension => {
+            if (message.messageLink.toLowerCase().includes(`.${extension}`)) {
+                isImage = true;
+            }
+        });
+
+        // Checking if the message link contains a video extension
+        videoExtensions.forEach(extension => {
+            if (message.messageLink.toLowerCase().includes(`.${extension}`)) {
+                isVideo = true;
+            }
+        });
+
+        if (isImage) {
+            
+
+            const imageElement = document.createElement('img');
+            imageElement.src = message.messageLink;
+            
+            messageElement.appendChild(imageElement);
+        } else if (isVideo) {
+            const videoLinkElement = document.createElement('a');
+            videoLinkElement.href = message.messageLink;
+            videoLinkElement.appendChild(linkElement);
+
+            const videoElement = document.createElement('video');
+            videoElement.src = message.messageLink;
+            videoElement.controls = true;
+            
+            messageElement.appendChild(videoElement);
+        } else {
+            messageElement.appendChild(linkElement);
+        }
     } else if (message.audioUrl) {
         const audioElement = document.createElement('audio');
         audioElement.src = message.audioUrl;
@@ -249,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
     recordButton.addEventListener('mouseup', () => {
         if (mediaRecorder && mediaRecorder.state === 'recording') {
             mediaRecorder.stop();
-            audioChunks = []; // Clear audioChunks for the next recording
+            audioChunks = []; // n7i din ymat l audioChunks bah twjd for the next recording
         }
     });
     

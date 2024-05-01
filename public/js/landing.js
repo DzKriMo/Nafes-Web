@@ -13,7 +13,8 @@ function left(){
     pbio.innerHTML = '<p class="pp" style="text-align: center" id="bio"> You literally can\'t <br> See him</p>'
     pname.innerHTML = '<h6 class="hh2" style="text-align: center" id="Name">John Cena</h6>'
     pimage.src = "/img/john.png" 
-
+ pimage.style= "width: 150px,height:150px;"
+ pimage.className = "ramyyyy";
     
 }
 function right() {
@@ -23,6 +24,8 @@ function right() {
     pbio.innerHTML = '<p class="pp" style="text-align: center" id="bio"> sadi9 el Co founder of <br> Nafes</p>'
     pname.innerHTML = '<h6 class="hh2" style="text-align: center" id="Name">Rami feghali</h6>'
     pimage.src = "/img/ramy.png"  
+    pimage.style= "width: 158.1px,height:145.8px;"
+    pimage.className = "ramyyy";
 }
 
 
