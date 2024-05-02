@@ -44,6 +44,10 @@ Route::get('/loginpage', function () {
     return view('loginPage');
 })->name('lp');
 
+Route::get('/loginn', function () {
+    return view('login');
+})->name('loginn');
+
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');

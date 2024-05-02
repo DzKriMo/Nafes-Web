@@ -169,10 +169,20 @@ body {
     width: 100vw;
     height: 50px;
     background-color: #fff;
+    display: flex;
 }
 
 #biggerContainer{
     display: flex;
     width: 100%;
     
+}
+#topLogo{
+    margin: auto;
+    width: 50px;
+    height: 46px;
+    filter: invert();
+}
+#topLogoo{
+    margin: auto;
 }
