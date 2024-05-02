@@ -78,7 +78,9 @@
 <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-storage.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-messaging.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+
+
 <script src="/js/random.js"></script>
 
 <script src="/js/chat.js"></script>

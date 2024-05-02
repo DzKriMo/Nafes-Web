@@ -1,3 +1,15 @@
+@auth
+@php
+
+header('Location: ' . route('dashboard'));
+exit;
+@endphp
+@else  
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +23,11 @@
     <link rel="stylesheet" href="/css/getStarted.css">
 </head>
 <body>
-    <div id="topWhite"></div>
+    <div id="topWhite">
+       <a href="{{route('index')}}"id="topLogoo"> <img src="/img/logo.png" alt="logo" id="topLogo"></a>
+    </div>
 <div id="biggerContainer">
     <div id="BigContainer">
-        
         <br><br>
         <h2>Join us</h2>
         <p style="text-align: center">Let us Walk you through on <br>  Becoming Nafas Therapist Today. </p>
@@ -33,7 +46,7 @@
                     <p>Login Info</p></div>
               </div>
 
-<br><br><br>
+<br>
 
 <div class="step" id="step1">
     <h5 class="step-title"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,3 +141,4 @@
     <script src="/js/getStarted.js"></script>
 </body>
 </html>
+@endauth

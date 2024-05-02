@@ -74,7 +74,7 @@
 <h1 id="ready">Ready to work with us <br>
     and help others?</h1>
     <p id="please">Please start the procedure so you can be a professional <br> therapist in Nafas</p>
-    <a href="{{route('rp')}}"><button id="getStartedButton" >Get Started with us</button></a>
+    <a href="{{route('getStarted')}}"><button id="getStartedButton" >Get Started with us</button></a>
 
 
 
