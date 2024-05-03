@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations.                   
      */
     public function up(): void
     {
@@ -15,10 +15,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('therapist_id')->constrained()->onDelete('cascade');
             $table->foreignId('client_id')->constrained()->onDelete('cascade');
-            $table->dateTime('start_time');
-            $table->dateTime('end_time');
+
             $table->string('client_name');
             $table->string('client_email')->unique();
+            $table->dateTime('start_time')->default(now());
+
+            $table->dateTime('end_time')->default(now());
+
             $table->integer('duration')->unsigned();
             $table->string('meeting_type');
             $table->string('status');

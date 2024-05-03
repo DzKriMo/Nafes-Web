@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('password'); // You may consider hashing the password for security
             $table->string('contact_info')->nullable();
             $table->text('payment_info')->nullable();
-            // Add more fields as needed
+
             $table->timestamps();
         });
     }

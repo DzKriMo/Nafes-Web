@@ -13,15 +13,14 @@ return new class extends Migration
     {
         Schema::create('therapists', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->timestamps();
+            $table->string('name', 100);
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('bio');
+            $table->string('bio')->nullable();
             $table->string('specialization')->nullable();
             $table->string('contact_info');
             $table->unsignedTinyInteger('rating')->nullable();
-
-            $table->timestamps();
         });
     }
 
@@ -31,6 +30,5 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('therapists');
-        //
     }
 };
