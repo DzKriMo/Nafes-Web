@@ -1,5 +1,5 @@
 :root {
-    --background-color: #fbfbfb; 
+    --background-color: #ffffff; 
     --text-color: #333; 
 
     --invbackground-color: #212020; 
@@ -9,7 +9,7 @@
   
   @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #fbfbfb; 
+        --background-color: #ffffff; 
         --text-color: #333; 
     
         --invbackground-color: #212020; 
@@ -85,12 +85,13 @@ html, body {
 
 #firstContainer {
     flex: 1;
+    background-color: #fff;
     background-image: url("/img/first.png");
     background-size: 100%,100%;
     
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 120vh; 
+    min-height: 123vh; 
     min-width: 100vw;
 }
 
@@ -426,7 +427,9 @@ display: flex;
     width: 50px;
     height: 50px;
   }
-  
+  #core-mission{
+    padding-left: 10vw;
+  }
 
 @media (max-width: 968px) {
 
@@ -485,6 +488,7 @@ display: flex;
     #core-mission{
         text-align: center;
         margin-bottom: 100px;
+        
     }
     #blankcore{
         width: 0%;

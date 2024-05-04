@@ -14,7 +14,7 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; border-radius: 10px;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute;">
     
         <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;"><img src="/img/logo.png" alt="logo" style="width: 30px; height:27.7px; filter: invert(100%);"> Nafas</a>
     
@@ -53,11 +53,11 @@
                 <div id="loginButtonContainerr">
                 @auth
                 <a href="{{ url('/dashboard') }}" class="nav-button" style="margin-right: 10px;">
-                    &nbsp;&nbsp; <button class="nav-button" class="navLoginButton">Dashboard</button>
+                    <button class="nav-button" class="navLoginButton">Dashboard</button>
                 </a>
                 @else
                 <a href="{{ route('lp') }}" class="nav-button" style="margin-right: 10px;">
-                    &nbsp;&nbsp;<button class="nav-button" class="navLoginButton">Log in</button>
+                    <button class="nav-button" class="navLoginButton">Log in</button>
                 </a>
                 @endauth
             </div>
