@@ -82,3 +82,16 @@
   background-color: #68B2A0;
   height: 2px;
 }
+
+@media (max-width: 968px) {
+  #loginButtonContainer{
+      display: flex;
+      
+      }
+      #loginButtonContainerr{
+       margin: auto;
+       padding-left: 20px;
+       
+      }
+  
+  }

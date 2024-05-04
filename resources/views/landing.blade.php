@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; border-radius: 10px;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; ">
     
     <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;"><img src="/img/logo.png" alt="logo" style="width: 30px; height:27.7px; filter: invert(100%);"> Nafas</a>
 
@@ -45,18 +45,18 @@
             </li>
           
             <li class="nav-item">
-                <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"style="color: #0C0C0CE5">&nbsp;&nbsp;Contact us</a>
+                <a class="nav-link" href="{{ route('contactus') }}"style="color: #0C0C0CE5">&nbsp;&nbsp;Contact us</a>
             </li>
         </ul>
         <div class="ml-auto" id="loginButtonContainer">
             <div id="loginButtonContainerr">
             @auth
             <a href="{{ url('/dashboard') }}" class="nav-button" style="margin-right: 10px;">
-                &nbsp;&nbsp; <button class="nav-button" class="navLoginButton">Dashboard</button>
+                <button class="nav-button" class="navLoginButton">Dashboard</button>
             </a>
             @else
             <a href="{{ route('lp') }}" class="nav-button" style="margin-right: 10px;">
-                &nbsp;&nbsp;<button class="nav-button" class="navLoginButton">Log in</button>
+                <button class="nav-button" class="navLoginButton">Log in</button>
             </a>
             @endauth
         </div>
@@ -90,13 +90,14 @@
 </div>
 
 <div class="containter" id="thirdContainer">
-    <div style="width:50%" id="blankcore"></div>
+    
     <div style="flex: 1;" id="core-mission">
     <h2 id="core">The core mission <br> behind all our <br> work : Your Happiness</h2>
     <p id="mission">Here at Nafas we work hard  to make <br> sure you are happy and mentally well</p>
     <br><br>
     <a href="{{route('register')}}" ><button id="getStartedButton2">Get Started with us</button></a>
 </div>
+<div style="width:50%" id="blankcore"></div>
 </div>
 
 

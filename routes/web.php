@@ -43,6 +43,9 @@ Route::get('/registerpage', function () {
 Route::get('/loginpage', function () {
     return view('loginPage');
 })->name('lp');
+Route::get('/contactus', function () {
+    return view('contactus');
+})->name('contactus');
 
 Route::get('/loginn', function () {
     return view('login');

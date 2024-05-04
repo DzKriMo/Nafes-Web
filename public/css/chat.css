@@ -41,7 +41,7 @@ body {
     flex: 2;
     width: 50%;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     overflow: hidden;
     background-color: #fefeff;
 }
@@ -65,7 +65,7 @@ body {
 #userList li {
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .chat-header {
@@ -149,7 +149,7 @@ body {
 .sent-message img{
    
     max-height: 12rem;
-    margin: auto;
+    margin: 0;
 }
 
 .sent-message video{
@@ -217,6 +217,7 @@ body {
     .chat-container {
         width: 100%;
         flex: 1;
+       
         min-height: 50vh;
         
     }
@@ -232,6 +233,8 @@ body {
     }
     #userList{
         max-height: 40vh;
+
+        
     }
    
 }
