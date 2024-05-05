@@ -12,7 +12,7 @@ class MeetingsController extends Controller
         // Validate incoming request data
         $validatedData = $request->validate([
             'therapist_id' => 'required|exists:therapists,id',
-            'client_id' => 'required|exists:clients,id',
+            'client_id' => 'required',
             'client_name' => 'required|string',
             'client_email' => 'required|email',
             'start_time' => 'required|date',

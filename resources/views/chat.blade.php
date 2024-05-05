@@ -22,36 +22,28 @@
 
    
         <div class="user-list">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight" style="color: #68B2A0">Patients List</h2>
+            <h2 class="font-semibold text-xl t leading-tight" style="color: #68B2A0; padding:20px">Patients List</h2>
             <ul id="userList"></ul>
         </div>
         <div class="chat-container">
             <div class="chat-header">
+
+                <img src="https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1714567794354_uwu-hitler-v0-51as8cwvl2k91.png?alt=media&token=3401f45a-217f-4524-8526-03640613557a" alt="suka" class="rounded-img">
                 <h3 id="contactName">Chat with: X</h3>
                 
                
-                    <button id="vidBtn" onclick="videoChat()"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_b_0_1)">
-                        <circle cx="24" cy="24" r="24" fill="#323F39"/>
-                        </g>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.125 29.75H17.25C16.007 29.75 15 28.743 15 27.5V20.5C15 19.257 16.007 18.25 17.25 18.25H25.125C26.368 18.25 27.375 19.257 27.375 20.5V27.5C27.375 28.743 26.368 29.75 25.125 29.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M27.375 25.097L31.17 28.151C31.906 28.744 33 28.22 33 27.275V20.725C33 19.78 31.906 19.256 31.17 19.849L27.375 22.903" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs>
-                        <filter id="filter0_b_0_1" x="-30" y="-30" width="108" height="108" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="15"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_1"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_1" result="shape"/>
-                        </filter>
-                        </defs>
-                        </svg>
+                    <button id="vidBtn" onclick="videoChat()">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.25 35.5H10.5C8.014 35.5 6 33.486 6 31V17C6 14.514 8.014 12.5 10.5 12.5H26.25C28.736 12.5 30.75 14.514 30.75 17V31C30.75 33.486 28.736 35.5 26.25 35.5Z" stroke="#000E08" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M30.75 26.194L38.34 32.302C39.812 33.488 42 32.44 42 30.55V17.45C42 15.56 39.812 14.512 38.34 15.698L30.75 21.806" stroke="#000E08" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
                         </button>
                 
             </div>
             <div class="chat-messages" id="chatMessages"></div>
             <div class="chat-input">
-                <textarea id="messageInput" placeholder="Type your message..."></textarea>
                 <img src="/img/clip.svg" alt="Upload Files" id="uploadTrigger">
+                <textarea id="messageInput" placeholder="Type your message..."></textarea>
                 <img src="/img/record.svg" alt="record audio" id="recordButton">
                 <input type="file" id="file-upload" style="display: none">
                 <button id="sendMessageBtn">Send</button>
