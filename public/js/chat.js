@@ -41,31 +41,53 @@ let uniqueUsers = [];
 
 function fetchUsers() {
     const userList = document.getElementById('userList');
-    userList.innerHTML = ''; 
-    uniqueUsers = []; 
+    userList.innerHTML = '';
+    uniqueUsers = [];
 
     const usersRef = database.ref('Users');
     usersRef.once('value', (snapshot) => {
         snapshot.forEach((userSnapshot) => {
             const userId = userSnapshot.key;
             const user = userSnapshot.val();
-            if (userId !== CurrentUserId && !uniqueUsers.includes(userId) && user.therapistID == CurrentUserId ) {
-                const li = document.createElement('li');
-                li.textContent = `${user.username} - ${user.email}`;
-                li.addEventListener('click', () => startChat(userId, user));
-                userList.appendChild(li);
+            if (userId !== CurrentUserId && !uniqueUsers.includes(userId) && user.therapistID == CurrentUserId) {
+                const div = document.createElement('div');
+                div.classList.add('user-item'); 
+
+                const img = document.createElement('img');
+                img.src = 'https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1714567794354_uwu-hitler-v0-51as8cwvl2k91.png?alt=media&token=3401f45a-217f-4524-8526-03640613557a';
+                img.classList.add('rounded-img'); 
+                div.appendChild(img);
+
+                const infoDiv = document.createElement('div'); 
+                infoDiv.classList.add('user-info');
+                const username = document.createElement('p');
+                username.classList.add('user-name');
+                username.textContent = user.username;
+                infoDiv.appendChild(username);
+
+                const email = document.createElement('p');
+                email.classList.add('user-email')
+                email.textContent = user.email;
+                infoDiv.appendChild(email);
+
+                div.appendChild(infoDiv); 
+
+                div.addEventListener('click', () => startChat(userId, user));
+                userList.appendChild(div);
                 uniqueUsers.push(userId);
             }
         });
     });
 }
 
+
+
 function startChat(userId, selectedUser) {
     otherUser = userId;
     console.log("Other User ID:", otherUser);
     const userName = selectedUser.username;
 
-    document.getElementById('contactName').textContent = `Chat with: ${userName}`;
+    document.getElementById('contactName').textContent = `${userName}`;
 
     const chatMessages = document.getElementById('chatMessages');
     chatMessages.innerHTML = '';
@@ -202,6 +224,7 @@ function displayMessage(message) {
         }
     } else if (message.audioUrl) {
         const audioElement = document.createElement('audio');
+        audioElement.classList.add('audiomessage');
         audioElement.src = message.audioUrl;
         audioElement.controls = true;
 

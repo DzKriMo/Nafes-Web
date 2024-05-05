@@ -55,6 +55,7 @@ body{
     background-color: #0c0c0ce8;
     border-radius: 22px;
     padding-inline: 10px;
+    border-color: transparent;
     padding-block: 5px;
     color: #FBFBFB;
     font-weight: 300;
@@ -64,3 +65,113 @@ body{
 #topbutton:hover{
     background-color: #181616e1;
 }
+
+
+
+
+
+
+
+
+#fifthContainer{
+    min-height: 80vh;
+    min-width: 100vw;
+    background-color: #68B2A0;
+}
+#subsCont{
+    margin-top: 50px;
+ display: flex;
+ min-width: 100vw;
+ min-height: 50vh;
+}
+#suub{
+    
+    display: flex;
+    margin: auto;
+}
+#hnafes{
+    color: #FBFBFB;
+    font-weight: 600;
+}
+#NafesContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#pnafes{
+    color: #FBFBFB;
+    font-size: 14px;
+}
+#subscribe{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+.email-subscribe {
+    display: flex;
+    
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .email-subscribe button[type="submit"] {
+    width: 80px;
+    height: 30px;
+    background-color: #0C0C0C;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: -90px;
+    margin-top: -4px;
+    z-index: 1;
+
+  }
+  
+  .email-subscribe input[type="email"] {
+    width: 300px;
+    height: 45px;
+    border-color: transparent;
+    border-radius: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-top: -5px;
+    position: relative;
+    z-index: 0;
+  }
+  #bottomcont{
+    display: flex;
+    
+  }
+  #bottom{
+    display: flex;
+    margin: auto;
+    width: 80vw;
+  }
+  #contactus{
+    flex: 1;
+  }
+  #address{
+    flex: 1;
+  }
+  .social{
+    width: 50px;
+    height: 50px;
+  }
+  #between{
+    min-height: 100vh;
+  }
+
+
+  @media (max-width: 968px) {
+    #suub{
+        flex-direction: column;
+    }
+    #bottom{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+  }

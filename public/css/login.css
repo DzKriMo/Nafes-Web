@@ -72,7 +72,8 @@ text-align: end;
     flex: 1;
     min-width: 45vw;
     margin-left: -10px;
-    margin-top: -30px;
+    margin-top: 60px;
+   
 }
 
 #linesContainer{
@@ -119,11 +120,27 @@ input{
     color: #ffff ;
     font-size: larger;
 }
+
 #loginForm{
     display: flex;
     flex-direction: column;
     padding-left: 20vw;
 }
+#obuttons{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+#obuttons svg{
+    margin-bottom: 20px;
+    
+}
+.othbtn{
+    width: 40vw;
+    
+}
+
 
 @media screen and (max-width: 768px){
     #bigAuthContainer{
@@ -158,5 +175,8 @@ input{
     }
     #bigloginn{
         display: none;
+    }
+    .othbtn{
+        width: 90vw;
     }
 }
