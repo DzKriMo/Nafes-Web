@@ -77,4 +77,37 @@ class MeetingsController extends Controller
         $meeting->delete();
         return response()->json(['message' => 'Meeting deleted successfully'], 200);
     }
+
+    public function checkAvailability(Request $request)
+{
+    $request->validate([
+        'therapist_id' => 'required|exists:therapists,id',
+        'date' => 'required|date_format:Y-m-d',
+    ]);
+
+    $therapistId = $request->input('therapist_id');
+    $date = $request->input('date');
+
+
+    $meetings = Meeting::where('therapist_id', $therapistId)
+        ->whereDate('start_time', $date)
+        ->get();
+
+    // available time slots
+    $availableTimeSlots = ['08:00', '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '17:00'];
+
+    // n7iw the  booked slots
+    foreach ($meetings as $meeting) {
+        $startTime = date('H:i', strtotime($meeting->start_time));
+        $endTime = date('H:i', strtotime($meeting->end_time));
+        $bookedTimeSlot = "$startTime-$endTime";
+        $index = array_search($bookedTimeSlot, $availableTimeSlots);
+        if ($index !== false) {
+            unset($availableTimeSlots[$index]);
+        }
+    }
+
+    return response()->json(['available_time_slots' => array_values($availableTimeSlots)], 200);
+}
+
 }

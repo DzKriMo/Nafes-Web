@@ -47,6 +47,7 @@ Route::get('/meeting/RetrieveTherapist/{id}', [MeetingsController::class, 'meeti
 Route::get('/meeting/RetrieveClient/{id}', [MeetingsController::class, 'meetingsForClient']);
 Route::get('/meeting/allmeetings', [MeetingsController::class, 'index']);
 Route::post('/meeting/delete/{id}', [MeetingsController::class, 'destroy']);
+Route::get('/meeting/checkAvailability', [MeetingsController::class, 'checkAvailability']);
 
 
 
