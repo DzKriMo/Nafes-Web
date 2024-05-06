@@ -41,7 +41,7 @@ Route::get('/registerpage', function () {
 })->name('rp');
 
 Route::get('/loginpage', function () {
-    return view('loginPage');
+    return view('login');
 })->name('lp');
 Route::get('/contactus', function () {
     return view('contactus');

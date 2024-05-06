@@ -75,7 +75,7 @@
 <p style="text-align: center; font-size:24px;">Your Voice Matters. Let Us Listen, Understand,<br> and Guide You Towards the Best Psychological <br>Care in Algeria, Because Your Mental Health Truly <br>Matters!
 Exclusively Available on our App</p>
 <div class="video-container">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <a href="https://play.google.com/store/apps/details?id=com.thekrimo.nafes">
         <img src="/img/google.png" style="width: 50%; max-width: 400px;" />
     </a>
 </div><br><br>

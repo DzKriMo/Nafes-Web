@@ -55,7 +55,7 @@
                 <button class="nav-button" class="navLoginButton">Dashboard</button>
             </a>
             @else
-            <a href="{{ route('lp') }}" class="nav-button" style="margin-right: 10px;">
+            <a href="{{ route('login') }}" class="nav-button" style="margin-right: 10px;">
                 <button class="nav-button" class="navLoginButton">Log in</button>
             </a>
             @endauth
@@ -95,7 +95,7 @@
     <h2 id="core">The core mission <br> behind all our <br> work : Your Happiness</h2>
     <p id="mission">Here at Nafas we work hard  to make <br> sure you are happy and mentally well</p>
     <br><br>
-    <a href="{{route('register')}}" ><button id="getStartedButton2">Get Started with us</button></a>
+    <a href="{{route('getStarted')}}" ><button id="getStartedButton2">Get Started with us</button></a>
 </div>
 <div style="width:50%" id="blankcore"></div>
 </div>

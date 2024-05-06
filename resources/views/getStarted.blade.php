@@ -31,6 +31,9 @@ exit;
         <br><br>
         <h2>Join us</h2>
         <p style="text-align: center">Let us Walk you through on <br>  Becoming Nafas Therapist Today. </p>
+    
+    
+    
         <div class="multi-step-form">
             <div id="progress-bar">
                 <div class="step-marker" id="marker1">
@@ -122,22 +125,46 @@ exit;
                 <p style="text-align: left; ">Setup your login informations</p>
                 <p class="req">all feilds with * are required</p>
 
-                <div class="input-group">
-                    <label for="email">*Email:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">*Password:</label><br>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button class="submit-btn next-btn" onclick="submitForm()">Submit</button>
-              </div>
-              
-            </div>
+
+
+
+                <form method="POST" action="{{ route('register') }}" id="registerationform">
+                    @csrf
+                    <label for="name">Display Name
+                    </label>
+                    <input class="input-group" id="name" type="text" name="name" required autofocus>
+            
+                    
+                    <label for="email">Email
+                    </label>
+                    <input class="input-group" id="email" type="email" name="email" required autocomplete="username">
+                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            
+                  
+                    <label for="password">Password
+                    </label>
+                    <input class="input-group" id="password" type="password" name="password" required autocomplete="new-password">
+                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            
+                   
+                    <label for="password_confirmation">Confirm Password</label>
+                    <input class="input-group" id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password">
+                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                   
+                    <a href="{{ route('lp') }}" style="text-align: center">Already registered?</a>
+            
+                   
+                    <button type="submit" id="Rbutton" class="submit-btn next-btn" onclick="submitForm()">Register</button>
+                </form>
+
+                
+
           </div>
       
     </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.js"></script>
     <script src="/js/getStarted.js"></script>
 </body>
 </html>

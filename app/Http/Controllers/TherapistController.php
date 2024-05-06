@@ -14,7 +14,7 @@ class TherapistController extends Controller
         // Validate incoming request data
         $validatedData = $request->validate([
             'name' => 'required|string',
-            'email' => 'required|email|unique:therapists,email',
+            'email' => 'required|string|unique:therapists,email',
             'password' => 'required|string|min:6',
             'bio' => 'nullable|string',
             'specialization' => 'nullable|string',
