@@ -1,6 +1,7 @@
 let CurrentUserId;
 let otherUser; 
 
+
 function updateDateTime() {
     let currentDate = new Date();
     let day = currentDate.getDate();
@@ -52,9 +53,10 @@ function fetchUsers() {
             if (userId !== CurrentUserId && !uniqueUsers.includes(userId) && user.therapistID == CurrentUserId) {
                 const div = document.createElement('div');
                 div.classList.add('user-item'); 
-
+                div.id=userId;
                 const img = document.createElement('img');
-                img.src = 'https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1714567794354_uwu-hitler-v0-51as8cwvl2k91.png?alt=media&token=3401f45a-217f-4524-8526-03640613557a';
+                if(user.image){img.src =user.image}
+                 else img.src = 'https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1714567794354_uwu-hitler-v0-51as8cwvl2k91.png?alt=media&token=3401f45a-217f-4524-8526-03640613557a';
                 img.classList.add('rounded-img'); 
                 div.appendChild(img);
 
@@ -80,14 +82,25 @@ function fetchUsers() {
     });
 }
 
-
+const pfp =document.getElementById("pfp")
+let selectedUserElement = null;
 
 function startChat(userId, selectedUser) {
+
+    if(selectedUserElement){
+        selectedUserElement.style.backgroundColor = '#ffffff';
+    }
     otherUser = userId;
     console.log("Other User ID:", otherUser);
     const userName = selectedUser.username;
-
+   if(selectedUser.image) pfp.src = selectedUser.image;
     document.getElementById('contactName').textContent = `${userName}`;
+
+    const userDiv = document.getElementById(userId);
+    if (userDiv) {
+        userDiv.style.backgroundColor = '#68B2A025'; 
+        selectedUserElement = userDiv; 
+    }
 
     const chatMessages = document.getElementById('chatMessages');
     chatMessages.innerHTML = '';
@@ -182,8 +195,8 @@ function displayMessage(message) {
         linkElement.href = message.messageLink;
         linkElement.textContent = message.message;
         applyLinkStyles(linkElement);
-        console.log(message.messageLink)
-        const imageExtensions = ['image','png', 'jpg', 'jpeg', 'gif', 'bmp', 'img' ];
+        console.log(message.messageLink);
+        const imageExtensions = ['image', 'png', 'jpg', 'jpeg', 'gif', 'bmp', 'img'];
         const videoExtensions = ['mp4', 'webm', 'ogg', 'avi'];
         let isImage = false;
         let isVideo = false;
@@ -203,12 +216,15 @@ function displayMessage(message) {
         });
 
         if (isImage) {
-            
-
             const imageElement = document.createElement('img');
             imageElement.src = message.messageLink;
-            
-            messageElement.appendChild(imageElement);
+
+            const imageLink = document.createElement('a');
+            imageLink.href = message.messageLink;
+            imageLink.target = '_blank'; // Opens in a new tab
+            imageLink.appendChild(imageElement);
+
+            messageElement.appendChild(imageLink);
         } else if (isVideo) {
             const videoLinkElement = document.createElement('a');
             videoLinkElement.href = message.messageLink;
@@ -217,7 +233,7 @@ function displayMessage(message) {
             const videoElement = document.createElement('video');
             videoElement.src = message.messageLink;
             videoElement.controls = true;
-            
+
             messageElement.appendChild(videoElement);
         } else {
             messageElement.appendChild(linkElement);
@@ -237,6 +253,7 @@ function displayMessage(message) {
     chatMessages.appendChild(messageElement);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
+
 
 
 function applyLinkStyles(linkElement) {

@@ -94,19 +94,18 @@ class MeetingsController extends Controller
         ->get();
 
     // available time slots
-    $availableTimeSlots = ['08:00', '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '17:00'];
+    $availableTimeSlots = ['08:00', '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00'];
 
     // n7iw the  booked slots
     foreach ($meetings as $meeting) {
-        $startTime = date('H:i', strtotime($meeting->start_time));
+        $bookedTimeSlot  = date('H:i', strtotime($meeting->start_time));
         $endTime = date('H:i', strtotime($meeting->end_time));
-        $bookedTimeSlot = "$startTime-$endTime";
         $index = array_search($bookedTimeSlot, $availableTimeSlots);
         if ($index !== false) {
             unset($availableTimeSlots[$index]);
         }
     }
-
+     
     return response()->json(['available_time_slots' => array_values($availableTimeSlots)], 200);
 }
 

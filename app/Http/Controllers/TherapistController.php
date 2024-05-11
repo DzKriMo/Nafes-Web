@@ -19,6 +19,7 @@ class TherapistController extends Controller
             'bio' => 'nullable|string',
             'specialization' => 'nullable|string',
             'contact_info' => 'required|string',
+            'features' => 'required|string',
             // Add more validation rules as needed
         ]);
 
@@ -30,6 +31,7 @@ class TherapistController extends Controller
             'bio' => $validatedData['bio'],
             'specialization' => $validatedData['specialization'],
             'contact_info' => $validatedData['contact_info'],
+            'features' => $validatedData['features'],
             // Add more fields as needed
         ]);
 

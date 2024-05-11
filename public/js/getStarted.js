@@ -47,6 +47,7 @@ function submitForm() {
         "bio": "I'm Slightly Racist",
         "specialization": "Making People Smile",
         "contact_info": document.getElementById('phone').value,
+        "features": "1,2,3 viva l'algerie",
     };
 
     
