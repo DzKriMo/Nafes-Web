@@ -80,11 +80,44 @@
 
 </div>
 
-<div class="container" id="PostContainer">
-    <br><br>
-    <h1 style="text-align: center; font-weight:600;">Nafas Community</h1>
-    <h3 style="text-align: center; font-weight:600;">Testomonials from our <br> Beloved Nafas Patients</h3>
+
+
     <div class="container" id="secondContainer">
+        <h1  id="high">High-impact services<br>for your business</h1>
+        <div class="parent">
+            <div class="divs" id="div1" onmouseover="changeImage('img1', '/img/11.png')" onmouseout="changeImage('img1', '/img/1.png')">
+                <img id="img1" src="/img/1.png" alt="1">
+                <h2 >Data colllection</h2>
+                <p>With our step by step login process we collect enaugh data to understand the case better from the start</p>
+            </div>
+            <div class="divs" id="div2" onmouseover="changeImage('img2', '/img/22.png')" onmouseout="changeImage('img2', '/img/2.png')">
+                <img id="img2" src="/img/2.png" alt="2">
+                <h2>Identification</h2>
+                <p>with our advanced Ai model we can identify the suitable patient you can help </p>
+            </div>
+            <div class="divs" id="div3" onmouseover="changeImage('img3', '/img/33.png')" onmouseout="changeImage('img3', '/img/3.png')">
+                <img id="img3" src="/img/3.png" alt="3">
+                <h2>Marketing</h2>
+                <p>Our serivce collect patients from all over the country so finding clients is easier</p>
+            </div>
+            <div class="divs" id="div4" onmouseover="changeImage('img4', '/img/44.png')" onmouseout="changeImage('img4', '/img/4.png')">
+                <img id="img4" src="/img/4.png" alt="4">
+                <h2>Creativity</h2>
+                <p>our creative platforms help the mental patient to stay focused and to everything to stay foundable</p>
+            </div>
+            <div class="divs" id="div5" onmouseover="changeImage('img5', '/img/55.png')" onmouseout="changeImage('img5', '/img/5.png')">
+                <img id="img5" src="/img/5.png" alt="5">
+                <h2>As it was</h2>
+                <p>our platform support alot of advanced technologies so you can experiece the sessions as if it is physical meeting</p>
+            </div>
+            <div class="divs" id="div6" onmouseover="changeImage('img6', '/img/66.png')" onmouseout="changeImage('img6', '/img/6.png')">
+                <img id="img6" src="/img/6.png" alt="6">
+                <h2>Cyber jihad</h2>
+                <p>we'll catch all flags</p>
+            </div>
+        </div>
+        
+
     </div>
 
 </div>

@@ -18,7 +18,7 @@
 
    
         <div class="user-list">
-            <h2 id="patients" style="color: #68B2A0; padding:20px">Patients List</h2>
+            <h2 id="patients" style="color: #68B2A0; padding:20px">Patients: </h2>
             <ul id="userList"></ul>
         </div>
         <div class="chat-container">

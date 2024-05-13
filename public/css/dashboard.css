@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  #meetings,
+  #today-meetings,
+  #weekly-meetings,
+  #notifications {
+    padding: 20px;
+    border: solid 1px #ccc;
+  }
+  

@@ -30,6 +30,9 @@ function right() {
 
 
 
+function changeImage(imgId, newSrc) {
+  document.getElementById(imgId).src = newSrc;
+}
 
 
 
@@ -298,8 +301,7 @@ function right() {
 
 
 
-
-
+/*
 const firebaseConfig = {
     apiKey: "AIzaSyBwJk-EfuBxl1ZpRaPA1D3wN28W3zfLgPY",
     authDomain: "nafas-therapy.firebaseapp.com",
@@ -361,3 +363,4 @@ const firebaseConfig = {
   
   displayPosts();
   window.addEventListener('resize',displayPosts);
+  */
