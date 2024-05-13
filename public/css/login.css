@@ -60,6 +60,7 @@ text-align: end;
     margin: auto;
 }
 
+
 #authContainer{
     display: flex;
     flex-direction: column;
@@ -124,7 +125,7 @@ input{
 #loginForm{
     display: flex;
     flex-direction: column;
-    padding-left: 20vw;
+    padding-left: 10vw;
 }
 #obuttons{
     margin: auto;

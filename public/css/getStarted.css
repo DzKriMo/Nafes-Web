@@ -117,6 +117,11 @@ body {
     border-radius: 12px;
     
 }
+#email,#name,#password,#password_confirmation{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
 
 .next-btn {
     width: 100%;

@@ -41,7 +41,7 @@ Route::get('/registerpage', function () {
 })->name('rp');
 
 Route::get('/loginpage', function () {
-    return view('loginPage');
+    return view('login');
 })->name('lp');
 Route::get('/contactus', function () {
     return view('contactus');
@@ -54,6 +54,10 @@ Route::get('/loginn', function () {
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
+
+Route::get('/land', function () {
+    return view('land');
+})->name('land');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

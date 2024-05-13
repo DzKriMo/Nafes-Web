@@ -95,15 +95,7 @@ html, body {
     min-width: 100vw;
 }
 
-#PostContainer {
-    flex: 1;
-    background-color: var(--background-color);
-    background-size: 100%,100%;
-    min-height: 110vh; 
-    min-width: 100vw;
-    color: #68B2A0;
-    
-}
+
 ::-webkit-scrollbar {
   width: 10px; 
 }
@@ -121,61 +113,6 @@ html, body {
 
 ::-webkit-scrollbar-corner {
   background-color: transparent; 
-}
-
-#secondContainer {
-    display: grid;
-
-    gap:35px;
-    overflow-x: scroll;
-    padding: 20px;
-    background-color: rgba(57, 57, 57, 0.218);
-    border-radius: 10px;
-    white-space: nowrap;
-    
- 
-   
-    scrollbar-width: thin; 
-  scrollbar-color: #ccc transparent; 
-}
-
-
-#secondContainer::-webkit-scrollbar-track {
-  background-color: transparent; 
-}
-
-
-#secondContainer::-webkit-scrollbar-thumb {
-  background-color: #ccc; 
-  border-radius: 10px; 
-}
-
-
-#secondContainer::-webkit-scrollbar-corner {
-  background-color: transparent; 
-}
-
-.post {
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: inline-block; 
-    height: 100%;
-    width: 100%; 
-    overflow-wrap: break-word; 
-  white-space: pre-wrap;
-}
-
-.post h2, .post p {
-    color: #0c0c0c;
-    margin-bottom: 10px;
-}
-
-.post small {
-    color: #333;
-    margin-bottom: 10px;
 }
 
 
@@ -210,11 +147,13 @@ html, body {
 }
 #getStartedButton {
     margin-left: 130px;
-    border-radius: 30px;
+    border-radius: 10px;
     border-color: transparent;
     color: #0C0C0CE5;
     font-size: 14px;
     padding-left: 30px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-image: url('/img/arrow.png'); 
     background-repeat: no-repeat;
     background-position: left center;
@@ -242,6 +181,67 @@ html, body {
     background-color: #68b29f74;
 }
 
+
+#secondContainer{
+    text-align: center;
+    background-color: #ffffff;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  #secondContainer > h1{
+    color: #68B2A0;
+    font-size: 40PX;
+    margin-top: 50px;
+    font-weight: 600;
+    margin-bottom: 3%;
+  }
+
+
+
+  .parent{
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 55PX;
+    margin-bottom: 50px;
+    padding: 2%;
+  }
+  .parent > div{
+    background-color: #f4f4f4;
+    border-radius: 25PX;
+    text-align: left;
+    width: 350px;
+    padding: 8%;
+  }
+  .parent > div > img{
+    width: 55px;
+    margin-bottom: 10%;
+  }
+  .parent > div > h2{
+    font-size: 20PX;
+    margin-bottom: 8%;
+    color: #68B2A0;
+  }
+  .parent > div > p{
+    font-size: 14PX;
+  }
+
+  .divs{
+    color: #0c0c0c;
+    background-color: #f4f4f4;
+  }
+  .divs:hover{
+    background-color: #6fb6a5;
+    scale: 1.2;
+  }
+  .divs:hover h2{
+    color: white;
+  }
+ 
 
 #core{
     color: #f0f0f0;
@@ -527,6 +527,24 @@ display: flex;
         align-items: center;
         text-align: center;
     }
+    .parent{
+      margin: auto;
+      width: 100%;
+      
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 5px;
+      grid-row-gap: 15PX;
+      margin-bottom: 20px;
+      padding: 2%;
+      overflow-x: scroll;
+    }
+    .divs:hover{
+     
+      scale: 1.1;
+    }
+  
    
 }
 

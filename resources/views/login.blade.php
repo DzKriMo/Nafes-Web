@@ -44,6 +44,8 @@
          <div id="BigContainer">
 
          <div id="bigAuthContainer">
+
+            
             <div id="authContainer">
                 <form method="POST" action="{{ route('login') }}" id="loginForm">
                     @csrf

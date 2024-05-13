@@ -1,11 +1,7 @@
 <link rel="stylesheet" href="/css/chat.css">
 @auth
 <x-app-layout style="background-color: azure">
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight" style="color: #68B2A0">
-            {{ __('Chat With Your Patients') }}
-        </h2>
-    </x-slot>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +18,13 @@
 
    
         <div class="user-list">
-            <h2 class="font-semibold text-xl t leading-tight" style="color: #68B2A0; padding:20px">Patients List</h2>
+            <h2 id="patients" style="color: #68B2A0; padding:20px">Patients: </h2>
             <ul id="userList"></ul>
         </div>
         <div class="chat-container">
             <div class="chat-header">
 
-                <img src="https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1714567794354_uwu-hitler-v0-51as8cwvl2k91.png?alt=media&token=3401f45a-217f-4524-8526-03640613557a" alt="suka" class="rounded-img">
+                <img src="https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1714567794354_uwu-hitler-v0-51as8cwvl2k91.png?alt=media&token=3401f45a-217f-4524-8526-03640613557a" alt="suka" class="rounded-img" id="pfp">
                 <h3 id="contactName">Chat with: X</h3>
                 
                
@@ -46,7 +42,10 @@
                 <textarea id="messageInput" placeholder="Type your message..."></textarea>
                 <img src="/img/record.svg" alt="record audio" id="recordButton">
                 <input type="file" id="file-upload" style="display: none">
-                <button id="sendMessageBtn">Send</button>
+                <button id="sendMessageBtn"><svg width="50" height="50" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.20268 20.2493L47.648 6.43488L35.7427 48.0968L28.4401 31.6629L41.4999 14.25L39.7499 12.5L22.2739 25.607L6.20268 20.2493ZM47.7419 6.40358C47.7963 6.3855 47.8423 6.3736 47.8801 6.36592L47.7419 6.40358Z" fill="#F6F6F6" stroke="#818183" stroke-width="2.5"/>
+                    </svg>
+                    </button>
             </div>
       
     </div>

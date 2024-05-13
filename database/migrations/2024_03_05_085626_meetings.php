@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('meetings', function (Blueprint $table) {
             $table->id();
             $table->foreignId('therapist_id')->constrained()->onDelete('cascade');
-            $table->foreignId('client_id')->constrained()->onDelete('cascade');
+            $table->string('client_id')->constrained()->onDelete('cascade');
             $table->dateTime('start_time');
             $table->dateTime('end_time');
             $table->string('client_name');
-            $table->string('client_email')->unique();
+            $table->string('client_email');
             $table->integer('duration')->unsigned();
             $table->string('meeting_type');
             $table->string('status');
