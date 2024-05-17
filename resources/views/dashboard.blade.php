@@ -16,7 +16,7 @@
 
         <div id="left">
          
-            <h1 id="mettingsHeader">Meetings:</h1>
+            <h1 class="mettingsHeader">Meetings:</h1>
             <div id="meetings">
 
 
@@ -132,6 +132,37 @@
 
             <div id="todaysMeetingsContainer"></div>
 
+           
+            <h2 id="monthHeader">Weekly meetings</h2>
+                
+           
+    
+            <table>
+                <tr>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+             
+                <tr class="days">
+                   <td id="1"></td>
+                   <td id="2"></td>
+                   <td id="3"></td>
+                   <td id="4"></td>
+                   <td id="5"></td>
+                   <td id="6"></td>
+                   <td id="7"></td>
+                </tr>
+            </table>
+            
+           
+            
+            
+            
           
             <div id="meetingDetailsModal" class="modal">
               <div class="modal-content">
@@ -145,11 +176,10 @@
    
 
         <div id="right">
-            <div id="notifications">
-                <h3>Notifications</h3>
-            </div>
-            <canvas id="myPieChart" width="200px" height="100px"></canvas>
-        
+            <h1 class="mettingsHeader">Notifications:</h1>
+            <div id="notifications"></div>
+            <canvas id="myPieChart"  ></canvas>
+          
         </div>
     </div>
       
