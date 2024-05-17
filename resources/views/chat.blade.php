@@ -24,7 +24,7 @@
         <div class="chat-container">
             <div class="chat-header">
 
-                <img src="https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1714567794354_uwu-hitler-v0-51as8cwvl2k91.png?alt=media&token=3401f45a-217f-4524-8526-03640613557a" alt="suka" class="rounded-img" id="pfp">
+                <img src="https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1715887188678_Screenshot_20231210_105630_Instagram-removebg-preview.png?alt=media&token=5051e198-6c58-4ab2-b493-026bfea5bd85" alt="img" class="rounded-img" id="pfp">
                 <h3 id="contactName">Chat with: X</h3>
                 
                
