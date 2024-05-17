@@ -1,3 +1,6 @@
+
+
+
 let CurrentUserId;
 let meetings = [];
 let monthlyMeetings;
@@ -6,13 +9,22 @@ let cancelledMeetings = [];
 let RescheduledMeetings = [];
 let doneMeetings = [];
 let freq= [[],[],[],[],[],[],[]];
+let currentMonth = new Date().getMonth();
+let currentYear = new Date().getFullYear();
+let today = new Date().setHours(0, 0, 0, 0);
+Date.prototype.getISOWeek = function() {
+    const onejan = new Date(this.getFullYear(), 0, 1);
+    return Math.ceil(((this - onejan) / 86400000 + onejan.getDay() + 1) / 7);
+  };
+  
+  const currentDate = new Date();
 
-
+let currentWeek = currentDate.getISOWeek();
 const meetingsnumb = document.getElementById("monthlyMeetings");
 const meetingscan = document.getElementById("monthlyCancelled");
 const meetingsdone = document.getElementById("monthlyDone");
 const meetingsres = document.getElementById("monthlyRescheduled");
-
+const startend = document.getElementById("startend");
 const todaysHeader = document.getElementById("todaysHeader");
 const todaysMeetingsContainer = document.getElementById("todaysMeetingsContainer");
 const latestUpdatesContainer = document.getElementById("notifications"); 
@@ -47,9 +59,7 @@ axios.get('/api/user-id')
         
         meetings = data.meetings;
 
-        const currentMonth = new Date().getMonth();
-        const currentYear = new Date().getFullYear();
-        const today = new Date().setHours(0, 0, 0, 0);
+      
 
         monthlyMeetings = meetings.filter(meeting => {
             const meetingDate = new Date(meeting.start_time);
@@ -57,14 +67,8 @@ axios.get('/api/user-id')
         });
     
         
-Date.prototype.getISOWeek = function() {
-    const onejan = new Date(this.getFullYear(), 0, 1);
-    return Math.ceil(((this - onejan) / 86400000 + onejan.getDay() + 1) / 7);
-  };
-  
-  const currentDate = new Date();
-  const currentWeek = currentDate.getISOWeek();
 
+console.log(meetings);
  
   weeklyMeetings = meetings.filter(meeting => {
     const meetingDate = new Date(meeting.start_time);
@@ -72,7 +76,9 @@ Date.prototype.getISOWeek = function() {
     return meetingDate.getISOWeek() === currentWeek && meetingDate.getFullYear() === currentYear && meetingDate.getMonth() === currentMonth;
   });
   
-        
+  const startDate = new Date(currentYear, 0, (currentWeek - 1) * 7 );
+  const endDate = new Date(currentYear, 0, currentWeek * 7-1);
+  startend.innerText =  startDate.toLocaleDateString() + " : " + endDate.toLocaleDateString()    
 
         monthlyMeetings.forEach(meeting => {
             if (meeting.status === "cancelled") {
@@ -95,6 +101,7 @@ Date.prototype.getISOWeek = function() {
     });
   
     for(let i=0; i<days.length;i++){
+        freq[i].sort((a, b) => new Date(a.start_time) - new Date(b.start_time));
         freq[i].forEach(meeting=>{
             const meetingDiv = document.createElement('div');
             meetingDiv.className = 'meeting-cell';
@@ -104,7 +111,6 @@ Date.prototype.getISOWeek = function() {
             days[i].appendChild(meetingDiv);
         })
     }
-
 
 
         const numberOfMeetings = monthlyMeetings.length;
@@ -129,7 +135,7 @@ Date.prototype.getISOWeek = function() {
                     <div class="meeting-info">
                         <p class="client-name">${meeting.client_name}</p>
                         <p class="client-email">${meeting.client_email}</p>
-                        <p class="meeting-time">${new Date(meeting.start_time).toLocaleTimeString()}</p>
+                        <p class="meeting-time">${new Date(meeting.start_time.replace('Z','')).toLocaleTimeString()}</p>
                     </div>
                 </div>
                 <button class="details-btn" onclick="showDetails(${meeting.id})">Show Details</button>
@@ -174,8 +180,8 @@ Date.prototype.getISOWeek = function() {
                 <h2 class="cc" style="text-align:center"><strong>Meeting Details</strong></h2>
                 <p class="cc"><strong>Client Name:</strong> ${meeting.client_name}</p>
                 <p class="cc"><strong>Client Email:</strong> ${meeting.client_email}</p>
-                <p class="cc"><strong>Start Time:</strong> ${new Date(meeting.start_time).toLocaleString()}</p>
-                <p class="cc"><strong>End Time:</strong> ${new Date(meeting.end_time).toLocaleString()}</p>
+                <p class="cc"><strong>Start Time:</strong> ${new Date(meeting.start_time.replace('Z','')).toLocaleTimeString()}</p>
+                <p class="cc"><strong>End Time:</strong> ${new Date(meeting.end_time.replace('Z','')).toLocaleTimeString()}</p>
                 <p class="cc"><strong>Note:</strong> ${meeting.note}</p>
                 <p class="cc"><strong>Status:</strong> ${meeting.status}</p>
             `;
@@ -238,4 +244,51 @@ function initializePieChart() {
             }
         }
     });
+}
+function changeWeek(offset) {
+    // Clear previous week's data
+    for (let i = 0; i < days.length; i++) {
+        days[i].innerHTML = '';
+        freq[i] = [];
+    }
+
+    currentWeek += offset;
+
+    
+    let startDate = new Date(currentYear, 0, (currentWeek - 1) * 7);
+    let endDate = new Date(currentYear, 0, currentWeek * 7-1);
+    
+   
+    if (startDate.getFullYear() !== currentYear) {
+        currentYear = startDate.getFullYear();
+        currentMonth = startDate.getMonth();
+    } else if (startDate.getMonth() !== currentMonth) {
+        currentMonth = startDate.getMonth();
+    }
+
+    startend.innerText = startDate.toLocaleDateString() + " : " + endDate.toLocaleDateString();
+
+  
+    weeklyMeetings = meetings.filter(meeting => {
+        const meetingDate = new Date(meeting.start_time);
+        return meetingDate.getISOWeek() === currentWeek && meetingDate.getFullYear() === currentYear;
+    });
+
+   
+    weeklyMeetings.forEach(meeting => {
+        const meetingDate = new Date(meeting.start_time);
+        const dayOfWeek = meetingDate.getDay();
+        freq[dayOfWeek].push(meeting);
+    });
+
+   
+    for (let i = 0; i < days.length; i++) {
+        freq[i].sort((a, b) => new Date(a.start_time) - new Date(b.start_time));
+        freq[i].forEach(meeting => {
+            const meetingDiv = document.createElement('div');
+            meetingDiv.className = 'meeting-cell';
+            meetingDiv.innerHTML = `<p class="${meeting.status}" onclick="showDetails(${meeting.id})">${meeting.status}</p>`;
+            days[i].appendChild(meetingDiv);
+        });
+    }
 }
