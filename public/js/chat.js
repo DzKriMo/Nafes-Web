@@ -56,7 +56,7 @@ function fetchUsers() {
                 div.id=userId;
                 const img = document.createElement('img');
                 if(user.image){img.src =user.image}
-                 else img.src = 'https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1715887188678_Screenshot_20231210_105630_Instagram-removebg-preview.png?alt=media&token=5051e198-6c58-4ab2-b493-026bfea5bd85';
+                 else img.src = 'https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1716505154680_oO1FKQ7yR_aOCl1KCtCQFg.jpg?alt=media&token=ddff41a6-80ca-4faa-8e06-861a7deadfdf';
                 img.classList.add('rounded-img'); 
                 div.appendChild(img);
 
@@ -94,7 +94,7 @@ function startChat(userId, selectedUser) {
     console.log("Other User ID:", otherUser);
     const userName = selectedUser.username;
    if(selectedUser.image) pfp.src = selectedUser.image;
-   else pfp.src = "https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1715887188678_Screenshot_20231210_105630_Instagram-removebg-preview.png?alt=media&token=5051e198-6c58-4ab2-b493-026bfea5bd85"
+   else pfp.src = "https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1716505154680_oO1FKQ7yR_aOCl1KCtCQFg.jpg?alt=media&token=ddff41a6-80ca-4faa-8e06-861a7deadfdf"
     document.getElementById('contactName').textContent = `${userName}`;
 
     const userDiv = document.getElementById(userId);
@@ -368,6 +368,27 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error recording audio:', error);
         }
     });*/
+
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', () => {
+        const searchQuery = searchInput.value.toLowerCase(); 
+
+        const userList = document.getElementById('userList');
+        const userItems = userList.querySelectorAll('.user-item');
+
+        userItems.forEach(item => {
+            const username = item.querySelector('.user-name').textContent.toLowerCase(); 
+            const userEmail = item.querySelector('.user-email').textContent.toLowerCase(); 
+
+            if (username.includes(searchQuery) || userEmail.includes(searchQuery)) {
+                item.style.display = 'flex'; 
+            } else {
+                item.style.display = 'none'; 
+            }
+        });
+    });
+
+
 
     document.getElementById('sendMessageBtn').addEventListener('click', () => {
         const messageInput = document.getElementById('messageInput');

@@ -137,7 +137,7 @@ exit;
                     
                     <label for="email">Email
                     </label>
-                    <input class="input-group" id="email" type="email" name="email" required autocomplete="username">
+                    <input class="input-group" id="email" type="email" name="email" required autocomplete="username" placeholder="must be all lowercase">
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
             
                   

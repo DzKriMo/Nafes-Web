@@ -46,7 +46,7 @@
                 </li>
               
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"style="color: #0C0C0CE5">&nbsp;&nbsp;Contact us</a>
+                    <a class="nav-link" href="{{route('contactus')}}"style="color: #0C0C0CE5">&nbsp;&nbsp;Contact us</a>
                 </li>
             </ul>
             <div class="ml-auto" id="loginButtonContainer">

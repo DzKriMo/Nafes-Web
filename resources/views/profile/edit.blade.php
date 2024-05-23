@@ -1,6 +1,9 @@
-<x-app-layout>
+<link rel="preconnect" href="https://fonts.bunny.net">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap">
+
+<x-app-layout style="font-family:'Roboto Serif', serif;">
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight" style="color: #68B2A0">
+        <h2 class="font-semibold text-xl  leading-tight" style="color: #68B2A0; margin-left:-45px;font-family:'Roboto Serif', serif; ">
             {{ __('Profile') }}
         </h2>
     </x-slot>

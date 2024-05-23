@@ -127,8 +127,22 @@
 
             </div>
 
-
-            <h2 id="todaysHeader">Today-0 meetings</h2>
+            <div id="todayyy">
+                <h2 id="todaysHeader">Today-0 meetings</h2>
+            
+                <div id="sliders">  
+                    <button id="prevButton"><svg  width="21.5" height="16" viewBox="0 0 43 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="41.5" height="31" rx="7.5" stroke="#C5C5C5" stroke-opacity="0.5"/>
+                        <path d="M24.3008 23.92L17.7808 17.4C17.0108 16.63 17.0108 15.37 17.7808 14.6L24.3008 8.08" stroke="#202020" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></button>
+                    <button id="nextButton" ><svg  width="21.5" height="16" viewBox="0 0 43 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="0.5" width="41.5" height="31" rx="7.5" stroke="#C5C5C5" stroke-opacity="0.5"/>
+                        <path d="M18.6992 8.08L25.2192 14.6C25.9892 15.37 25.9892 16.63 25.2192 17.4L18.6992 23.92" stroke="#202020" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></button>    
+                </div>
+            
+            </div>
+            
 
             <div id="todaysMeetingsContainer"></div>
 
@@ -140,14 +154,15 @@
             
             </div> 
             <div id="buttonscont">
-                <svg onclick="changeWeek(-1)" width="43" height="32" viewBox="0 0 43 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button onclick="changeWeek(-1)"><svg  width="43" height="32" viewBox="0 0 43 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.5" y="0.5" width="41.5" height="31" rx="7.5" stroke="#C5C5C5" stroke-opacity="0.5"/>
                     <path d="M24.3008 23.92L17.7808 17.4C17.0108 16.63 17.0108 15.37 17.7808 14.6L24.3008 8.08" stroke="#202020" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <svg onclick="changeWeek(1)" width="43" height="32" viewBox="0 0 43 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1" y="0.5" width="41.5" height="31" rx="7.5" stroke="#C5C5C5" stroke-opacity="0.5"/>
-                        <path d="M18.6992 8.08L25.2192 14.6C25.9892 15.37 25.9892 16.63 25.2192 17.4L18.6992 23.92" stroke="#202020" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    </svg></button>
+                <button onclick="changeWeek(1)"><svg  width="43" height="32" viewBox="0 0 43 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="0.5" width="41.5" height="31" rx="7.5" stroke="#C5C5C5" stroke-opacity="0.5"/>
+                    <path d="M18.6992 8.08L25.2192 14.6C25.9892 15.37 25.9892 16.63 25.2192 17.4L18.6992 23.92" stroke="#202020" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></button>
+                    
             </div>
                
                         

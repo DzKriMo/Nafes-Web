@@ -1,4 +1,4 @@
-<section>
+<section style="font-family:'Roboto Serif', serif;">
     <header>
         <h2 class="text-lg font-medium " style="color:#0c0c0c">
             {{ __('Profile Information') }}

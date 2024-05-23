@@ -1,6 +1,6 @@
-<nav x-data="{ open: false }" style="background-color:#68B2A0 ">
+<nav x-data="{ open: false }" style="background-color:#68B2A0; font-family:'Roboto Serif', serif;" >
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div style="padding-inline: 100px;">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -37,7 +37,7 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link :href="route('profile.edit')" >
                             {{ __('Profile') }}
                         </x-dropdown-link>
 

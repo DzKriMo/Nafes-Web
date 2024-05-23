@@ -10,7 +10,7 @@
 }
 
 #left {
-  
+  flex:1;
   display: flex;
   flex-direction: column;
   overflow-x: scroll;
@@ -82,6 +82,7 @@
   margin-top: 1rem;
   font-size: 18px;
   font-weight: 500;
+  flex: 1;
 }
 #monthHeader {
   font-size: 18px;
@@ -107,7 +108,14 @@ margin-top: 0.4rem;
   display: flex;
   min-height: 11rem;
   margin-bottom: 1rem;
+  width: 100%;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; 
+  -ms-overflow-style: none
+}
+#todaysMeetingsContainer::-webkit-scrollbar {
+  display: none; 
 }
 
 .meeting-card {
@@ -215,7 +223,7 @@ margin-top: 0.4rem;
   width: 260px!important;
   padding: 10px;
   aspect-ratio: 1;
-  align-self: flex-end;
+  
   border-radius: 14px;
  
   background-color: #FBFBFB;
@@ -247,6 +255,7 @@ margin-top: 0.4rem;
 }
 .notification-content p {
   margin: auto;
+max-width: 30ch;
 }
 
 .close:hover,
@@ -344,4 +353,15 @@ tr:last-child td {
 .rescheduled{
   background-color: #217AFF80;
   border-radius: 10px;
+}
+#todayyy{
+  display: flex;
+}
+
+#sliders{
+  margin: auto;
+  flex: 1;
+}
+#sliders svg{
+  scale: 1.2;
 }

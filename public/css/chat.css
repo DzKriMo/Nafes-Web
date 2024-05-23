@@ -14,9 +14,27 @@ body {
     height: 100%;
     
 }
-#patients{
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+#ptnts{
+    display: flex;
+    padding-inline: 10px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
     filter: blur();
+}
+#searchInput {
+    padding: 8px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%; 
+    height: 40px;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #68B2A0; 
+}
+#patients{
+  
     
     padding-top:15px ;
     padding-bottom: 15px;
@@ -53,7 +71,7 @@ body {
     padding-inline: 10px;
     background-color: #ffffff;
     border-radius: 6px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
     filter: blur();
     border-style: solid;
     border-width: 2px;
@@ -127,7 +145,7 @@ body {
     padding-inline: 10px;
     padding-top:15px ;
     padding-bottom: 15px;
-    box-shadow: 0px 3px 10px rgba(23, 23, 23, 0.179);
+    box-shadow: 0px 3px 10px rgba(23, 23, 23, 0.05);
     display: flex;
     border: transparent;
     
