@@ -365,3 +365,21 @@ tr:last-child td {
 #sliders svg{
   scale: 1.2;
 }
+
+
+
+.status-red {
+  color: red;
+}
+
+.status-blue {
+  color: blue;
+}
+
+.status-gray {
+  color: gray;
+}
+
+.status-green {
+  color: green;
+}

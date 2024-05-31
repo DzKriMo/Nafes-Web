@@ -4,7 +4,7 @@ use App\Http\Controllers\MeetingsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TherapistController;
-
+use App\Http\Controllers\Matching;
 
 use function Pest\Laravel\get;
 
@@ -59,3 +59,6 @@ Route::get('/meeting/checkAvailability', [MeetingsController::class, 'checkAvail
 //client api 
 
 Route::post('/client/register', [ClientController::class, 'register']);
+
+
+Route::post('/receive-request', [Matching::class, 'receiveRequest']);

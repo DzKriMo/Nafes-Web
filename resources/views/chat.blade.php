@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat App</title>
+    <title>Chat</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -74,7 +75,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
 
 
-<script src="/js/random.js"></script>
+
 
 <script src="/js/chat.js"></script>
 </body>
