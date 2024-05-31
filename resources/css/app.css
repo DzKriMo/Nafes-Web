@@ -2,6 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    font-family: 'Roboto Serif', serif;
-}

@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat App</title>
+    <title>Chat</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -18,13 +19,15 @@
 
    
         <div class="user-list">
-            <h2 id="patients" style="color: #68B2A0; padding:20px">Patients: </h2>
+            <div id="ptnts"><h2 id="patients" style="color: #68B2A0; padding:20px">Patients: </h2>
+                <input type="text" id="searchInput" placeholder="Search patients..." /></div>
+            
             <ul id="userList"></ul>
         </div>
         <div class="chat-container">
             <div class="chat-header">
 
-                <img src="https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1715887188678_Screenshot_20231210_105630_Instagram-removebg-preview.png?alt=media&token=5051e198-6c58-4ab2-b493-026bfea5bd85" alt="img" class="rounded-img" id="pfp">
+                <img src="https://firebasestorage.googleapis.com/v0/b/nafas-therapy.appspot.com/o/files%2F1716505154680_oO1FKQ7yR_aOCl1KCtCQFg.jpg?alt=media&token=ddff41a6-80ca-4faa-8e06-861a7deadfdf" alt="img" class="rounded-img" id="pfp">
                 <h3 id="contactName">Chat with: X</h3>
                 
                
@@ -72,7 +75,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
 
 
-<script src="/js/random.js"></script>
+
 
 <script src="/js/chat.js"></script>
 </body>

@@ -177,7 +177,7 @@
                 <h6 style="color: #FBFBFB;">Subscribe</h6>
                 <div class="email-subscribe">
                     <input type="email" placeholder="Enter your email here" required id="email-input">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="z-index: 3;"><button type="submit">Subscribe</button></a>
+                    <a href="#" style="z-index: 3;"><button type="submit">Subscribe</button></a>
                   </div>
             </div>
             </div>
@@ -195,7 +195,7 @@
             </div>
             <div id="socials">
                 <a href="#"><img src="/img/facebook.png" alt="facebook" class="social"></a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="social" src="/img/instagram.png" alt="intagram"></a>
+                <a href="https://www.instagram.com/nafass_dz_/" target="_blank"><img class="social" src="/img/instagram.png" alt="intagram"></a>
                 <a href="#"><img src="/img/linkedin.png" alt="linkedin" class="social"></a>
             </div>
         </div>
