@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('specialization')->nullable();
             $table->string('contact_info');
             $table->unsignedTinyInteger('rating')->nullable();
+            $table->string('features')->nullable();
         });
     }
 

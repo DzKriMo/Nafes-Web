@@ -19,5 +19,5 @@ class Therapist extends Model
             $therapist->password = Hash::make($therapist->password);
         });
     }
-    protected $fillable = ['name', 'email', 'password', 'bio', 'specialization', 'contact_info'];
+    protected $fillable = ['name', 'email', 'password', 'bio', 'specialization', 'contact_info', 'features'];
 }
