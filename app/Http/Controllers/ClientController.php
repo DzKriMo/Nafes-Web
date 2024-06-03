@@ -32,4 +32,8 @@ class ClientController extends Controller
 
         return response()->json(['client' => $client], 201);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa

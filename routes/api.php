@@ -1,10 +1,20 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\MeetingsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TherapistController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\Matching;
+
+use function Pest\Laravel\get;
+
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa
 
 use function Pest\Laravel\get;
 
@@ -24,6 +34,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa
 //Therapist Api 
 Route::post('/therapists/register', [TherapistController::class, 'register']);
 Route::post('/therapists/update/{id}', [TherapistController::class, 'updateProfile']);
@@ -43,6 +57,10 @@ Route::get('/meeting/RetrieveTherapist/{id}', [MeetingsController::class, 'meeti
 Route::get('/meeting/RetrieveClient/{id}', [MeetingsController::class, 'meetingsForClient']);
 Route::get('/meeting/allmeetings', [MeetingsController::class, 'index']);
 Route::post('/meeting/delete/{id}', [MeetingsController::class, 'destroy']);
+<<<<<<< HEAD
+=======
+Route::get('/meeting/checkAvailability', [MeetingsController::class, 'checkAvailability']);
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa
 
 
 
@@ -54,3 +72,9 @@ Route::post('/meeting/delete/{id}', [MeetingsController::class, 'destroy']);
 //client api 
 
 Route::post('/client/register', [ClientController::class, 'register']);
+<<<<<<< HEAD
+=======
+
+
+Route::post('/receive-request', [Matching::class, 'receiveRequest']);
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa

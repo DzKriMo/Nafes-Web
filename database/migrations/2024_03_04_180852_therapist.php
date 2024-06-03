@@ -21,7 +21,12 @@ return new class extends Migration
             $table->string('specialization')->nullable();
             $table->string('contact_info');
             $table->unsignedTinyInteger('rating')->nullable();
+<<<<<<< HEAD
             $table->string('features')->nullable();
+=======
+            $table->string('features');
+            $table->timestamps();
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa
         });
     }
 

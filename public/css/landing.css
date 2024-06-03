@@ -1,17 +1,20 @@
 :root {
-    --background-color: #fbfbfb; 
+    --background-color: #ffffff; 
     --text-color: #333; 
 
     --invbackground-color: #212020; 
       --invtext-color: #fff;
+      --image-filter: invert(100%);
   }
   
   @media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #212020; 
-      --text-color: #fff;
-      --invbackground-color: #fbfbfb; 
-      --invtext-color: #333; 
+        --background-color: #ffffff; 
+        --text-color: #333; 
+    
+        --invbackground-color: #212020; 
+          --invtext-color: #fff;
+          --image-filter: invert(100%);
     }
   }
 html, body {
@@ -24,7 +27,12 @@ html, body {
     background-color: #68B2A0;
     overflow-x: hidden; 
 }
-
+#test{
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 .nav-button {
@@ -35,7 +43,7 @@ html, body {
     text-align: center;
     text-decoration: none;
     border-color: transparent;
-   
+    
     cursor: pointer;
     font-size: 14px;
     margin-top: 2px;
@@ -77,22 +85,37 @@ html, body {
 
 #firstContainer {
     flex: 1;
+    background-color: #fff;
     background-image: url("/img/first.png");
     background-size: 100%,100%;
+    
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; 
+    min-height: 123vh; 
     min-width: 100vw;
 }
 
-#secondContainer {
-    flex: 1;
-    background-color: var(--background-color);
-    background-size: 100%,100%;
-    min-height: 100vh; 
-    min-width: 100vw;
-    color: #68B2A0;
+
+::-webkit-scrollbar {
+  width: 10px; 
 }
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc; 
+  border-radius: 10px; 
+}
+
+
+::-webkit-scrollbar-corner {
+  background-color: transparent; 
+}
+
+
 
 
 #thirdContainer {
@@ -124,11 +147,13 @@ html, body {
 }
 #getStartedButton {
     margin-left: 130px;
-    border-radius: 30px;
+    border-radius: 10px;
     border-color: transparent;
     color: #0C0C0CE5;
     font-size: 14px;
     padding-left: 30px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-image: url('/img/arrow.png'); 
     background-repeat: no-repeat;
     background-position: left center;
@@ -156,6 +181,67 @@ html, body {
     background-color: #68b29f74;
 }
 
+
+#secondContainer{
+    text-align: center;
+    background-color: #ffffff;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  #secondContainer > h1{
+    color: #68B2A0;
+    font-size: 40PX;
+    margin-top: 50px;
+    font-weight: 600;
+    margin-bottom: 3%;
+  }
+
+
+
+  .parent{
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 55PX;
+    margin-bottom: 50px;
+    padding: 2%;
+  }
+  .parent > div{
+    background-color: #f4f4f4;
+    border-radius: 25PX;
+    text-align: left;
+    width: 350px;
+    padding: 8%;
+  }
+  .parent > div > img{
+    width: 55px;
+    margin-bottom: 10%;
+  }
+  .parent > div > h2{
+    font-size: 20PX;
+    margin-bottom: 8%;
+    color: #68B2A0;
+  }
+  .parent > div > p{
+    font-size: 14PX;
+  }
+
+  .divs{
+    color: #0c0c0c;
+    background-color: #f4f4f4;
+  }
+  .divs:hover{
+    background-color: #6fb6a5;
+    scale: 1.2;
+  }
+  .divs:hover h2{
+    color: white;
+  }
+ 
 
 #core{
     color: #f0f0f0;
@@ -223,9 +309,17 @@ html, body {
     display: flex;
 }
 #ramyImage{
-    width: 150px;
-    height: 150px;
+width: 158.1px;
+height:145.8px;
     margin: auto;
+    
+    
+}
+.ramyyy{
+filter: var(--image-filter);
+}
+.ramyyyy{
+filter: none;
 }
 
 #arrowsContainer{
@@ -333,7 +427,9 @@ display: flex;
     width: 50px;
     height: 50px;
   }
-  
+  #core-mission{
+    padding-left: 10vw;
+  }
 
 @media (max-width: 968px) {
 
@@ -376,6 +472,8 @@ display: flex;
 
     }
 
+
+
     #thirdContainer {
         flex: 1;
         background-image: url("/img/third.png");
@@ -390,6 +488,7 @@ display: flex;
     #core-mission{
         text-align: center;
         margin-bottom: 100px;
+        
     }
     #blankcore{
         width: 0%;
@@ -411,6 +510,15 @@ display: flex;
         
         
     }
+    #loginButtonContainer{
+    display: flex;
+    
+    }
+    #loginButtonContainerr{
+     margin: auto;
+     padding-left: 20px;
+     
+    }
     #suub{
         flex-direction: column;
     }
@@ -419,6 +527,24 @@ display: flex;
         align-items: center;
         text-align: center;
     }
+    .parent{
+      margin: auto;
+      width: 100%;
+      
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 5px;
+      grid-row-gap: 15PX;
+      margin-bottom: 20px;
+      padding: 2%;
+      overflow-x: scroll;
+    }
+    .divs:hover{
+     
+      scale: 1.1;
+    }
+  
    
 }
 

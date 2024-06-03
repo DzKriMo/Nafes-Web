@@ -80,3 +80,16 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+
+@media (max-width: 968px) {
+  #loginButtonContainer{
+      display: flex;
+      
+      }
+      #loginButtonContainerr{
+       margin: auto;
+       padding-left: 20px;
+       
+      }
+  
+  }

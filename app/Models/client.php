@@ -25,4 +25,8 @@ class client extends Model
     {
         $this->attributes['password'] = Hash::make($password);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa

@@ -22,6 +22,11 @@ return new class extends Migration
 
             $table->dateTime('end_time')->default(now());
 
+            $table->string('client_id')->constrained()->onDelete('cascade');
+            $table->dateTime('start_time');
+            $table->dateTime('end_time');
+            $table->string('client_name');
+            $table->string('client_email');
             $table->integer('duration')->unsigned();
             $table->string('meeting_type');
             $table->string('status');

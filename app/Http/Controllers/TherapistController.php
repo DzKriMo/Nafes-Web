@@ -14,11 +14,19 @@ class TherapistController extends Controller
         // Validate incoming request data
         $validatedData = $request->validate([
             'name' => 'required|string',
+<<<<<<< HEAD
             'email' => 'required|email|unique:therapists,email',
+=======
+            'email' => 'required|string|unique:therapists,email',
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa
             'password' => 'required|string|min:6',
             'bio' => 'nullable|string',
             'specialization' => 'nullable|string',
             'contact_info' => 'required|string',
+<<<<<<< HEAD
+=======
+            'features' => 'required|string',
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa
             // Add more validation rules as needed
         ]);
 
@@ -30,6 +38,10 @@ class TherapistController extends Controller
             'bio' => $validatedData['bio'],
             'specialization' => $validatedData['specialization'],
             'contact_info' => $validatedData['contact_info'],
+<<<<<<< HEAD
+=======
+            'features' => $validatedData['features'],
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa
             // Add more fields as needed
         ]);
 
@@ -112,4 +124,8 @@ class TherapistController extends Controller
 
         return response()->json(['message' => 'Password updated successfully'], 200);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 29abd5a4e331204e6883eb18cc27968263fcfcaa

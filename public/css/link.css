@@ -1,0 +1,11 @@
+.link {
+    color: azure;
+    font-size: medium;
+    min-width: 100%;
+    padding: 10px; 
+    display: inline-block; 
+}
+
+.link:hover {
+    background-color: #28715f;
+}

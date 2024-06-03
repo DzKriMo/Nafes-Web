@@ -17,9 +17,9 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; border-radius: 10px;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; ">
     
-        <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;"><img src="/img/logo.png" alt="logo" style="width: 30px; height:30px; filter: invert(100%);"> Nafes</a>
+        <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;"><img src="/img/logo.png" alt="logo" style="width: 30px; height:27.7px; filter: invert(100%);"> Nafas</a>
     
         <!-- Toggler button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -31,35 +31,44 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto mr-auto text-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}"style="color: #0C0C0CE5">About</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('about') }}"style="color: #0C0C0CE5">&nbsp;&nbsp;About</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('faq') }}" style="color: #0C0C0CE5">FAQ</a>
+                    <a class="nav-link" href="{{ route('faq') }}" style="color: #0C0C0CE5">&nbsp;&nbsp;FAQ</a>
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('patient') }}" style="color: #0C0C0CE5">I'm a Patient</a>
+                    <a class="nav-link" href="{{ route('patient') }}" style="color: #0C0C0CE5">&nbsp;&nbsp;I'm a Patient</a>
                 </li>
               
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"style="color: #0C0C0CE5">Contact us</a>
+                    <a class="nav-link" href="{{route('contactus')}}"style="color: #0C0C0CE5">&nbsp;&nbsp;Contact us</a>
                 </li>
             </ul>
+            <div class="ml-auto" id="loginButtonContainer">
+                <div id="loginButtonContainerr">
+                @auth
+                <a href="{{ url('/dashboard') }}" class="nav-button" style="margin-right: 10px;">
+                    <button class="nav-button" class="navLoginButton">Dashboard</button>
+                </a>
+                @else
+                <a href="{{ route('lp') }}" class="nav-button" style="margin-right: 10px;">
+                    <button class="nav-button" class="navLoginButton">Log in</button>
+                </a>
+                @endauth
+            </div>
+            </div>
         </div>
     
         
-        <div class="ml-auto">
-            @auth
-            <a href="{{ url('/dashboard') }}" class="nav-button" style="margin-right: 10px;">
-                <button class="nav-button">Dashboard</button>
-            </a>
-            @else
-            <a href="{{ route('login') }}" class="nav-button" style="margin-right: 10px;">
-                <button class="nav-button">Log in</button>
-            </a>
-            @endauth
-        </div>
+        
     </nav>
 
 <div class="container">

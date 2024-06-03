@@ -1,0 +1,183 @@
+body{
+    background-color: #F5F5F5;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+#topWhite{
+    height: 50px;
+    min-width: 100vw;
+    display: flex;
+    background-color: #ffff;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+
+}
+
+#leftTop{
+    width: 50%;
+    flex:1 ;
+    display: flex;
+    
+
+}
+
+#rightTop{
+    width: 50%;
+    flex: 1;
+text-align: end;
+
+
+}
+#create{
+    color: #111111;
+}
+
+
+#logoContainer{
+    display: flex;
+    margin-top: 50px;
+}
+#logooContainer{
+    display: flex;
+    margin-top: 50px;
+}
+#logo{
+    width: 50px;
+    height: 46px;
+    margin: auto;
+    filter: invert();
+}
+
+#BigContainer{
+    display: flex;
+    margin-top: 50px;
+}
+#bigAuthContainer{
+    display: flex;
+    margin: auto;
+}
+
+
+#authContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+   min-width: 45vw;
+}
+#oAuthContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 45vw;
+    margin-left: -10px;
+    margin-top: 60px;
+   
+}
+
+#linesContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    min-width: 10vw;
+}
+#line1{
+    background-color: #6666663d;
+    width: 2px;
+    height: 20vh;
+    margin: auto;
+}
+#or{
+    font-style: italic;
+    padding-top: 10px;
+}
+
+#line2{
+    background-color: #6666663d;
+    width: 2px;
+    height: 20vh;
+    margin: auto;
+}
+
+input{
+    border-radius: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-color: #6666663d;
+    background-color: #F5F5F5;
+}
+
+#Rbutton{
+    background-color: #2C6975;
+    border-radius: 32px;
+    width: 100%;
+    padding: 10px;
+    border-color: transparent;
+    color: #ffff ;
+    font-size: larger;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10vw;
+}
+#obuttons{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+#obuttons svg{
+    margin-bottom: 20px;
+    
+}
+.othbtn{
+    width: 40vw;
+    
+}
+
+
+@media screen and (max-width: 768px){
+    #bigAuthContainer{
+        flex-direction: column;
+    }
+    #loginForm{
+        padding-left: 0vw;
+    }
+    #linesContainer{
+        flex-direction: row;
+        margin-top: 40px;
+    }
+
+    #line1{
+        background-color: #6666663d;
+        width: 25vw;
+        height: 2px;
+        margin: auto;
+    }
+    #or{
+        margin: auto;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #line2{
+        background-color: #6666663d;
+        width: 25vw;
+        height: 2px;
+        margin: auto;
+    }
+    #bigloginn{
+        display: none;
+    }
+    .othbtn{
+        width: 90vw;
+    }
+}

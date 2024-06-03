@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nafes</title>
+    <title>Nafas نَفَس</title>
     <link rel="icon" type="image/x-icon" href="/img/logo.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/landing.css">
+
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; border-radius: 10px;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfbfbed;  positon: absolute; ">
     
-    <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;"><img src="/img/logo.png" alt="logo" style="width: 30px; height:30px; filter: invert(100%);"> Nafes</a>
+    <a class="navbar-brand" href="{{route('index')}}" style="margin-left: 10px; color: #0C0C0CE5;"><img src="/img/logo.png" alt="logo" style="width: 30px; height:27.7px; filter: invert(100%);"> Nafas</a>
 
     <!-- Toggler button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -26,64 +27,110 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto mr-auto text-center">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('about') }}"style="color: #0C0C0CE5">About</a>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('about') }}"style="color: #0C0C0CE5">&nbsp;&nbsp;About</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('faq') }}" style="color: #0C0C0CE5">FAQ</a>
+                <a class="nav-link" href="{{ route('faq') }}" style="color: #0C0C0CE5">&nbsp;&nbsp;FAQ</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('patient') }}" style="color: #0C0C0CE5">I'm a Patient</a>
+                <a class="nav-link" href="{{ route('patient') }}" style="color: #0C0C0CE5">&nbsp;&nbsp;I'm a Patient</a>
             </li>
           
             <li class="nav-item">
-                <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"style="color: #0C0C0CE5">Contact us</a>
+                <a class="nav-link" href="{{ route('contactus') }}"style="color: #0C0C0CE5">&nbsp;&nbsp;Contact us</a>
             </li>
         </ul>
+        <div class="ml-auto" id="loginButtonContainer">
+            <div id="loginButtonContainerr">
+            @auth
+            <a href="{{ url('/dashboard') }}" class="nav-button" style="margin-right: 10px;">
+                <button class="nav-button" class="navLoginButton">Dashboard</button>
+            </a>
+            @else
+            <a href="{{ route('login') }}" class="nav-button" style="margin-right: 10px;">
+                <button class="nav-button" class="navLoginButton">Log in</button>
+            </a>
+            @endauth
+        </div>
+        </div>
     </div>
 
     
-    <div class="ml-auto">
-        @auth
-        <a href="{{ url('/dashboard') }}" class="nav-button" style="margin-right: 10px;">
-            <button class="nav-button">Dashboard</button>
-        </a>
-        @else
-        <a href="{{ route('login') }}" class="nav-button" style="margin-right: 10px;">
-            <button class="nav-button">Log in</button>
-        </a>
-        @endauth
-    </div>
+    
 </nav>
 
 
 
 <div class="container" id="firstContainer">
-<h1 id="ready">Ready to work with us <br><br>
+<br><br><br><br><br>
+<h1 id="ready">Ready to work with us <br>
     and help others?</h1>
-    <p id="please">Please start the procedure so you can be a professional <br> therapist in Nafes</p>
-    <a href="{{route('rp')}}"><button id="getStartedButton" >Get Started with us</button></a>
+    <p id="please">Please start the procedure so you can be a professional <br> therapist in Nafas</p>
+    <a href="{{route('getStarted')}}"><button id="getStartedButton" >Get Started with us</button></a>
 
 
 
 </div>
 
-<div class="container" id="secondContainer">
-    <br><br>
-    <h3 style="text-align: center; font-weight:600;">Our Services</h3>
-    <h1 style="text-align: center; font-weight:600;">High-impact services <br> for your business</h1>
+
+
+    <div class="container" id="secondContainer">
+        <h1  id="high">High-impact services<br>for your business</h1>
+        <div class="parent">
+            <div class="divs" id="div1" onmouseover="changeImage('img1', '/img/11.png')" onmouseout="changeImage('img1', '/img/1.png')">
+                <img id="img1" src="/img/1.png" alt="1">
+                <h2 >Data colllection</h2>
+                <p>With our step by step login process we collect enaugh data to understand the case better from the start</p>
+            </div>
+            <div class="divs" id="div2" onmouseover="changeImage('img2', '/img/22.png')" onmouseout="changeImage('img2', '/img/2.png')">
+                <img id="img2" src="/img/2.png" alt="2">
+                <h2>Identification</h2>
+                <p>with our advanced Ai model we can identify the suitable patient you can help </p>
+            </div>
+            <div class="divs" id="div3" onmouseover="changeImage('img3', '/img/33.png')" onmouseout="changeImage('img3', '/img/3.png')">
+                <img id="img3" src="/img/3.png" alt="3">
+                <h2>Marketing</h2>
+                <p>Our serivce collect patients from all over the country so finding clients is easier</p>
+            </div>
+            <div class="divs" id="div4" onmouseover="changeImage('img4', '/img/44.png')" onmouseout="changeImage('img4', '/img/4.png')">
+                <img id="img4" src="/img/4.png" alt="4">
+                <h2>Creativity</h2>
+                <p>our creative platforms help the mental patient to stay focused and to everything to stay foundable</p>
+            </div>
+            <div class="divs" id="div5" onmouseover="changeImage('img5', '/img/55.png')" onmouseout="changeImage('img5', '/img/5.png')">
+                <img id="img5" src="/img/5.png" alt="5">
+                <h2>As it was</h2>
+                <p>our platform support alot of advanced technologies so you can experiece the sessions as if it is physical meeting</p>
+            </div>
+            <div class="divs" id="div6" onmouseover="changeImage('img6', '/img/66.png')" onmouseout="changeImage('img6', '/img/6.png')">
+                <img id="img6" src="/img/6.png" alt="6">
+                <h2>Cyber jihad</h2>
+                <p>we'll catch all flags</p>
+            </div>
+        </div>
+        
+
+    </div>
 
 </div>
 
 <div class="containter" id="thirdContainer">
-    <div style="width:50%" id="blankcore"></div>
+    
     <div style="flex: 1;" id="core-mission">
     <h2 id="core">The core mission <br> behind all our <br> work : Your Happiness</h2>
-    <p id="mission">Here at Nafes we work hard  to make <br> sure you are happy and mentally well</p>
+    <p id="mission">Here at Nafas we work hard  to make <br> sure you are happy and mentally well</p>
     <br><br>
-    <a href="{{route('register')}}" ><button id="getStartedButton2">Get Started with us</button></a>
+    <a href="{{route('getStarted')}}" ><button id="getStartedButton2">Get Started with us</button></a>
 </div>
+<div style="width:50%" id="blankcore"></div>
 </div>
 
 
@@ -99,7 +146,7 @@
         <div id="better">
            <h2 class="hh2">80%</h2>
            <h4 class="hh4">Better than traditional therapy</h4>
-           <p class="pp">Online therapy through nafes has provided <br> very optimistic numbers satisfiying both <br> the client and the therapist</p>            
+           <p class="pp">Online therapy through nafas has provided <br> very optimistic numbers satisfiying both <br> the client and the therapist</p>            
         </div>
 
         <div id="clients">
@@ -119,7 +166,7 @@
 <br>
 <h6 class="hh2" style="text-align: center" id="Name">Rami feghali</h6>
 
-<p class="pp" style="text-align: center" id="bio"> sadi9 el Co founder of <br> Nafes</p>
+<p class="pp" style="text-align: center" id="bio"> sadi9 el Co founder of <br> Nafas</p>
 
 
 
@@ -139,7 +186,7 @@
     <div class="container" id="subsCont">
         <div class="container" id="suub">
             <div id="NafesContainer">
-            <h1 id="hnafes"> <img src="/img/logo.png" alt="logo" style="width: 45px; height:45px"> Nafes</h1>
+            <h1 id="hnafes"> <img src="/img/logo.png" alt="logo" style="width: 45px; height:43.3px"> Nafas</h1>
             <p id="pnafes">We’re a team of students that wants to <br> develop the therapy culture in Algeria</p>
         </div>
 
@@ -147,7 +194,7 @@
             <h6 style="color: #FBFBFB;">Subscribe</h6>
             <div class="email-subscribe">
                 <input type="email" placeholder="Enter your email here" required id="email-input">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="z-index: 3;"><button type="submit">Subscribe</button></a>
+                <a href="#" style="z-index: 3;"><button type="submit">Subscribe</button></a>
               </div>
         </div>
         </div>
@@ -165,7 +212,7 @@
         </div>
         <div id="socials">
             <a href="#"><img src="/img/facebook.png" alt="facebook" class="social"></a>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="social" src="/img/instagram.png" alt="intagram"></a>
+            <a href="https://www.instagram.com/nafass_dz_/" target="_blank"><img class="social" src="/img/instagram.png" alt="intagram"></a>
             <a href="#"><img src="/img/linkedin.png" alt="linkedin" class="social"></a>
         </div>
     </div>
@@ -179,6 +226,14 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
 <script src="/js/landing.js"></script>
+
+
+
+
+
 
 </html>
